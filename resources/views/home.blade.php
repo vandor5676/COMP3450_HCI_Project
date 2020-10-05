@@ -10,7 +10,7 @@
 <main class="container">
 
   <section class ="card" data-aos="fade-right">
-    <img src="../public/images/intro-image.jpg" alt="">
+    <img src={{asset("/images/intro-image.jpg")}} alt="">
     <div class ="intro__text">
       <img id="icon1" src="../public/images/ecology.png" alt="">
       <br>
