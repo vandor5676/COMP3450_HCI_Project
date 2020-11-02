@@ -1,6 +1,6 @@
-/* Navbar */
+/* Navbar has been moved to navBar.css*/
 
-.navbar {
+/* .navbar {
   width: 100%;
   height: 70px;
   display: flex;
@@ -61,7 +61,7 @@
 
 .navbar__item:last-child {
   margin-right: 50px;
-}
+} */
 
 /* Content */
 

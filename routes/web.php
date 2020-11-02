@@ -32,3 +32,8 @@ Route::get('/services', function () {
 Route::get('/youthemployment', function () {
     return view('youthemployment');
 });
+
+//rout for cart page
+Route::get('/cart', function () {
+    return view('cart');
+});
