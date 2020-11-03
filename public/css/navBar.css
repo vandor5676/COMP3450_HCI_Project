@@ -75,18 +75,40 @@ li a {
     div.bar {
       background-color: rgb(180, 91, 91);
    font-family: 'Ebrima', sans-serif;
-   height: 4em;
+
 
    display: flex;
    justify-content: space-between;
    z-index: 1;
    transition: all 0.3s ease-in-out;
-   font-size: 2rem;
+   /* font-size: 2rem; */
     width: 100%;
     }
-    .navbarItem:not(:first-child) {display: none;}
+    /* .navbarItem:not(:first-child) {display: none;}
     .navbarItem a.icon {
       float: right;
       display: block;
+    } */
+
+    div.navbarItem
+    {
+        
+        padding: 0em 0em 0em 0em;
+        margin: auto;
+        margin-left:10px ;
+        margin-right: 10px;
+      
+    }
+    .navbar__logo-container
+    {
+     
+    }
+    .logo
+    {
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+
     }
   }
