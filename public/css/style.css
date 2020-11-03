@@ -28,7 +28,6 @@
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
-
 .logo.active {
   background-image: url("../images/IT-Logo-sm.png");
   background-repeat: no-repeat;
@@ -68,130 +67,322 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'BenchNine', sans-serif;
-  font-size: 1.2em;
-  background: #ededed;
+  background-color:#f5f0f0!important;
+  margin: 50px;
 }
 
-a {
-  color: #404040;
-  text-decoration: none;
-}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
 
 .container {
-  max-width: 1500px;
+  max-width: 100%;
   margin:auto;
   /* overflow: auto; */
   padding:0 2rem;
 }
 
+.category {
+  width: auto;
+  height: 80px;
+  background-color: #464646;
+  margin-top: 3rem;
+}
+
+#cat_title {
+  padding-left: 40px;
+  font-family: 'Oswald', sans-serif;
+  font-size:50px;
+  font-weight: 400;
+  color: white;
+}
+
+.cat_buttons{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#produce_btn {
+  font-family: 'Oswald', sans-serif;
+  font-size:40px;
+  color: #426a5a;
+  background-color:#f1eded;
+  width: 100%;
+  height: 150px;
+  border-width: 5px;
+  border-color: #426a5a;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#produce_btn:hover{
+  background-color: #426a5a;
+  color: white;
+}
+
+#meat_btn {
+  font-family: 'Oswald', sans-serif;
+  font-size:40px;
+  color: #9e2a2b;
+  background-color:#f1eded;
+  width: 100%;
+  height: 150px;
+  border-width: 5px;
+  border-color: #9e2a2b;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#meat_btn:hover{
+  background-color: #9e2a2b;
+  color: white;
+}
+
+#dairy_btn {
+  font-family: 'Oswald', sans-serif;
+  font-size:40px;
+  color: #db7c26;
+  background-color:#f1eded;
+  width: 100%;
+  height: 150px;
+  border-width: 5px;
+  border-color: #db7c26;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#dairy_btn:hover{
+  background-color: #db7c26;
+  color: white;
+}
+
+#honey_btn {
+  font-family: 'Oswald', sans-serif;
+  font-size:40px;
+  color: #f7b538;
+  background-color:#f1eded;
+  width: 100%;
+  height: 150px;
+  border-width: 5px;
+  border-color: #f7b538;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#honey_btn:hover{
+  background-color: #f7b538;
+  color: white;
+}
+
+#bakery_btn {
+  font-family: 'Oswald', sans-serif;
+  font-size:40px;
+  color: #78675a;
+  background-color:#f1eded;
+  width: 100%;
+  height: 150px;
+  border-width: 5px;
+  border-color: #78675a;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#bakery_btn:hover{
+  background-color: #78675a;
+  color: white;
+}
+
+#viewall_btn {
+  font-family: 'Oswald', sans-serif;
+  font-size:40px;
+  color: #464646;
+  background-color:#f1eded;
+  width: 100%;
+  height: 150px;
+  border-width: 5px;
+  border-color: #464646;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#viewall_btn:hover{
+  background-color: #464646;
+  color: white;
+}
+
 .main-header{
-  height: 55vh;
+  height: 70vh;
   background-image: url('../images/header-image-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 img {
-  width: 100%;
-}
-
-.card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-  background:  #fff;
-  margin-bottom: 2rem;
-}
-
-.card img{
-  height: 650px;
-}
-
-.card > div{
-  padding: 2rem;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.card:nth-child(e) img{
-  order: 2;
-}
-
-#icon1{
-  width: auto;
-  height: 6rem;
-  display: block;
-  margin: 0 auto;
-}
-
-#icon2{
-  width: auto;
-  height: 6rem;
-  display: block;
-  margin: 20px auto 60px auto;
-}
-
-#icon3{
-  width: auto;
-  height: 6rem;
-  display: block;
-  margin: 60px auto 0px auto;
-}
-
-.btn1{
-  display: inline-block;
-  background: #404040;
-  color: #fff;
-  padding: 0.8rem 1.8rem;
-  margin-top: 3rem;
-  cursor: pointer;
-}
-
-.btn2{
-  display: inline-block;
-  background: #404040;
-  color: #fff;
-  padding: 0.8rem 1.8rem;
-  margin-top: 3rem;
-  cursor: pointer;
-}
-
-.btn1:hover, .btn2:hover{
-  opacity: 0.8;
-}
-
-.intro__text{
-    font-size: 1.7rem;
-    text-align: center;
-}
-
-.info__text {
-  font-size: 1.8rem;
-  text-align: center;
-}
-
-.training__text {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.training__text li{
-  list-style: none;
-}
-
-@media(max-width: 700px){
-  .card {
+    max-width: 100%;
     display: block;
-  }
+    border-style: none;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.card-body {
+  text-align: center;
+  margin-right: 50px;
+}
+
+.carousel-control-prev {
+  padding-right: 50px;
+}
+
+.carousel-control-next {
+  padding-left: 50px;
+}
+
+  /* Active slider card */
+
+.featured-card {
+    background-color: #9e2a2b;
+    padding-top: 20px;
+}
+
+.featured-title {
+  font-family: 'Oswald', sans-serif;
+  font-size:60px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-right: 80px;
+  margin-left: 30px;
+}
+
+.featured-desc {
+  font-family: 'Oswald', sans-serif;
+  font-size:50px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  margin-right: 80px;
+  margin-left: 30px;
+}
+
+#featured_btn {
+  font-family: 'Oswald', sans-serif;
+  background-color: #9e2a2b;
+  font-size:30px;
+  color: #f7b538;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  border-width: 5px;
+  border-color: #f7b538;
+}
+
+#featured_btn:hover{
+  background-color: #f7b538;
+  color: white;
+}
+
+  /* Vendor slider card #1 */
+
+  .vendor1-card {
+      background-color: #f7b538;
+      padding-top: 20px;
+  }
+
+  .vendor1-title {
+    font-family: 'Lora', serif;
+    font-size:20px;
+    font-weight: 700;
+    color: #464646;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .vendor1-desc {
+    font-family: 'Josefin Slab', serif;
+    font-size:20px;
+    font-weight: 600;
+    color: #3d3d3d;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #vendor1_btn {
+    font-family: 'Oswald', sans-serif;
+    background-color: #464646;
+    font-size:20px;
+    color: #white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+  }
+
+  #vendor1_btn:hover{
+    background-color: #db7c26;
+    color: white;
+  }
+
+  /* Vendor slider card #2 */
+
+  .vendor2-card {
+      background-color: #426a5a;
+  }
+
+  .vendor2-title {
+    font-family: 'Oswald', sans-serif;
+    font-size:30px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #94b336;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .vendor2-desc {
+    font-family: 'Inter', sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #vendor2_btn {
+    font-family: 'Oswald', sans-serif;
+    background-color: #464646;
+    font-size:20px;
+    color: #white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+  }
+
+  #vendor2_btn:hover{
+    background-color: #94b336;
+  }
+
+}
 /* Footer */
 .container {
     display: flex;
