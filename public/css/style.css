@@ -74,6 +74,14 @@ body {
   margin: 50px;
 }
 
+.modal-body {
+  /* background-color: #464646; */
+}
+
+.mb-4 {
+  text-align: left;
+}
+
 @media only screen and (min-width: 768px) {
   /* For desktop: */
 
