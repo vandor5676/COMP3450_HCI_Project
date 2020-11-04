@@ -13,5 +13,7 @@
 <body>
     @include('inc.navbar')
     @yield('content')
+    <!-- should i have a seperate file for cart? -->
+    @yield('cart') 
   </body>
 </html>

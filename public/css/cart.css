@@ -1,0 +1,100 @@
+.banner
+{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/cart/bannerapplesSmall.jpg);
+    height: 7cm;
+}
+.bannerImage
+{
+    width: 100%;
+    
+}
+.content#cart
+{
+    background-color: #F2F2F2;
+    height: 1000px;
+}
+.bannerTitle
+{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7cm;
+      font-size: 6em;
+      font-family: 'Oswald', sans-serif;
+      color: white;
+}
+.cartContainer
+{
+    display: flex;
+}
+.content#itemsContainer
+{
+   
+    height: 3em;
+    background-color: violet;
+    /* max-width: 90em;
+    margin: auto; */
+    flex: 7;
+}
+.content#totalcontainer
+{
+   
+    height: 3em;
+    background-color: rgb(95, 32, 95);
+    /* max-width: 90em;
+    margin: auto; */
+    flex: 3;
+}
+
+/* items in cart */
+.cartItem
+{
+    /* height: 100px; */
+    background-color: wheat;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 0.8em;
+
+    display: flex;
+}
+.image > img
+{
+    /* flex: 1; */
+    /* background-image: url("/images/logo.png"); */
+    height: auto;
+    max-width: 10em;
+    margin: 1em;
+}
+.text
+{
+    font-family: 'Segoe UI';
+    margin-top: 1.5em;
+}
+.text > p#title
+{
+font-size: 2em;
+}
+.text > p#subtitle
+{
+    font-size: 1em;
+}
+.text > p#stock
+{
+    font-size: 1em;
+    color: #3FA87E;
+}
+.quantity
+{
+
+}
+.priceRemove
+{
+
+}
+
+

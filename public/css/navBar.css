@@ -32,7 +32,8 @@ li a {
 
    display: flex;
    justify-content: space-between;
-   z-index: 1;
+   position: relative;
+   z-index: 1000;
    transition: all 0.3s ease-in-out;
 
   }
