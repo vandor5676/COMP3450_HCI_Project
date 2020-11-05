@@ -14,17 +14,19 @@
     </div>
 </div>
 <div class="cartContainer" id="cart">
-<!-- cart item -->
+    <!-- cart item -->
     <div class="content" id="itemsContainer">
         <div class="cartItem">
-            <div>
+            <div class="imageTextContainer">
                 <div class="image" id="image" style="display: inline-block;">
                     <img class="cartItemImage" src={{asset("/images/logo.png")}} alt="logo">
                 </div>
-                <div class="text" id="text" style="display: inline-block;">
-                    <p id="title">Farm Eggs</p>
-                    <p id="subtitle">Thistle Farm</p>
-                    <p id="stock">In Stock</p>
+                <div class="text" id="text">
+                    <div>
+                        <p id="title">Farm Eggs</p>
+                        <p id="subtitle">Thistle Farm</p>
+                        <p id="stock">In Stock</p>
+                    </div>
                 </div>
             </div>
 
@@ -49,16 +51,19 @@
                 </div>
             </div>
         </div>
-<!-- cart item -->
+        <!-- cart item -->
+        <div class="content" id="itemsContainer">
         <div class="cartItem">
-            <div>
+            <div class="imageTextContainer">
                 <div class="image" id="image" style="display: inline-block;">
                     <img class="cartItemImage" src={{asset("/images/logo.png")}} alt="logo">
                 </div>
-                <div class="text" id="text" style="display: inline-block;">
-                    <p id="title">Farm Eggs</p>
-                    <p id="subtitle">Thistle Farm</p>
-                    <p id="stock">In Stock</p>
+                <div class="text" id="text">
+                    <div>
+                        <p id="title">Farm Eggs</p>
+                        <p id="subtitle">Thistle Farm</p>
+                        <p id="stock">In Stock</p>
+                    </div>
                 </div>
             </div>
 
