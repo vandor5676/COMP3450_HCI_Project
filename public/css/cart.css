@@ -34,8 +34,8 @@
 .content#itemsContainer
 {
    
-    height: 3em;
-    background-color: violet;
+    height: auto;
+    /* background-color: violet; */
     /* max-width: 90em;
     margin: auto; */
     flex: 7;
@@ -43,10 +43,10 @@
 .content#totalcontainer
 {
    
-    height: 3em;
+    height: auto;
+    /* delete later */
+    height: 3em; 
     background-color: rgb(95, 32, 95);
-    /* max-width: 90em;
-    margin: auto; */
     flex: 3;
 }
 
@@ -54,7 +54,7 @@
 .cartItem
 {
     /* height: 100px; */
-    background-color: wheat;
+    background-color: #E8E8E8;
     max-width: 80%;
     margin: auto;
     margin-top: 1em;
@@ -62,17 +62,27 @@
 
     display: flex;
 }
+.image
+{
+    max-width: 10em;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+}
 .image > img
 {
     /* flex: 1; */
     /* background-image: url("/images/logo.png"); */
     height: auto;
-    max-width: 10em;
-    margin: 1em;
+    padding: 1em;
+    display: block;
+    /* height: 100%; */
+    width: 100%;
+    vertical-align: middle;
 }
 .text
 {
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI','Oswald', 'sans-serif';
     margin-top: 1.5em;
 }
 .text > p#title
@@ -92,9 +102,91 @@ font-size: 2em;
 {
 
 }
+.quantityFrame
+{
+background-color: #707070;
+border-radius: 2em;
+margin-top: 1.4em;
+}
 .priceRemove
 {
+    position: relative;
+    width: auto;
+    font-family: 'Segoe UI','Oswald', 'sans-serif';
+}
+.price
+{
+padding: 2em;
+}
+.remove
+{
+position: absolute;
+bottom: 0;
+left: 0;
+margin: 0.5em;
 
+}
+.remove > i{
+    margin-right: 0.5em;
 }
 
 
+/* <div class="priceRemove" id="priceRemove">
+<div class="price">
+    <p>$2.99</p>
+</div>
+<div class="remove">
+    <i class="fa fa-trash" aria-hidden="true">Remove</i>
+</div>
+</div> */
+
+@media (max-width: 1040px) {
+    .content#itemsContainer, .content#totalcontainer {
+      display: block;
+    }
+    .cartContainer
+    {
+        display: block;
+    }
+    .cartItem
+    {
+        max-width: 100%;
+        margin: auto;
+        margin-top: 1em;
+        border-radius: 0.8em;
+        height: auto;
+    }
+    .text
+    {
+        display: block;
+        flex: none;
+        margin: 0;
+        margin-left: 1em;
+    }
+    .image
+    {
+        display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text > p#title
+    {
+    font-size: 1.5em;
+    }
+    .text > p#subtitle
+    {
+        font-size: 1em;
+    }
+    .text > p#stock
+    {
+        font-size: 1em;
+    }
+
+
+}
+
+/* <div class="quantity" id="quantity">
+                <div id="quantityFrame">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="q" placeholder="1" min="1">
+                </div> */
