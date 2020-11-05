@@ -90,13 +90,42 @@
             </div>
 
         </div>
-        <!-- end of car items -->
+        <!-- end of cart items -->
     </div>
     <!-- total -->
-    <div class="content" id="totalcontainer">
-        <!-- <div class="cartItem"></div> -->
+    <div class="totalWraper">
+        <div class="totalcontainer" id="totalcontainer">
+            <div class="totalItemCost">
+                <div class="totalText">
+                    <p>Item(s):</p>
+                </div>
+                <div class="totalPrice">
+                    <p>$34.99</p>
+                </div>
+            </div>
+            <div class="totalDeliveryFee">
+                <div class="totalText">
+                    <p>Delivery fee:</p>
+                </div>
+                <div class="totalPrice">
+                    <p>$5.99</p>
+                </div>
+            </div>
+            <!-- devider -->
+            <div class="totalDevider"></div>
+            <div class="totalTotalCost">
+                <div class="totalText"> 
+                    <p>Total:</p>
+                </div>
+                <div class="totalPrice">
+                    <p>$40.98</p>
+                </div>
+            </div>
+            <button class="procedeToCheckout">Proceed to Checkout</button>
 
+        </div>
     </div>
+    <!-- end total -->
 
 </div>
 

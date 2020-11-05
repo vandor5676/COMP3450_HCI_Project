@@ -40,13 +40,8 @@
     margin: auto; */
     flex: 7;
 }
-.content#totalcontainer
+.totalWraper
 {
-   
-    height: auto;
-    /* delete later */
-    height: 3em; 
-    background-color: rgb(95, 32, 95);
     flex: 3;
 }
 
@@ -55,7 +50,7 @@
 {
     /* height: 100px; */
     background-color: #E8E8E8;
-    max-width: 80%;
+    max-width: 85%;
     margin: auto;
     margin-top: 1em;
     margin-right: 0;
@@ -97,7 +92,7 @@ align-items: center;
 }
 .text > div > p#title
 {
-font-size: 2em;
+font-size: 1.5em;
 }
 .text > div > p#subtitle
 {
@@ -141,15 +136,6 @@ margin: 0.5em;
     margin-right: 0.5em;
 }
 
-
-/* <div class="priceRemove" id="priceRemove">
-<div class="price">
-    <p>$2.99</p>
-</div>
-<div class="remove">
-    <i class="fa fa-trash" aria-hidden="true">Remove</i>
-</div>
-</div> */
 
 @media (max-width: 1040px) {
     .content#itemsContainer, .content#totalcontainer {
@@ -204,9 +190,85 @@ margin: 0.5em;
         margin-left: 1.5em;
     }
 }
+.totalWraper
+{
 
-/* <div class="quantity" id="quantity">
-                <div id="quantityFrame">
-                    <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" name="q" placeholder="1" min="1">
-                </div> */
+}
+.totalcontainer
+{
+    font-family: 'Segoe UI','Oswald', 'sans-serif';       
+    font-size: 1.5em;
+    height: auto;
+    /* background-color: rgb(95, 32, 95); */
+    margin: 1em;
+    max-width: 13em;
+}
+
+.totalItemCost
+{
+    display: flex;
+    align-content: space-between;
+}
+
+.totalDeliveryFee
+{
+    display: flex;
+}
+.totalDevider
+{
+    background-color: #201F1F;
+    height: 2px;
+    margin-bottom: 0.5em;
+    margin-top: 0.3em;
+}
+.totalTotalCost
+{
+    display: flex;
+}
+.procedeToCheckout
+{
+    display: block;
+    width: 100%;
+    background-color:#93E676;
+    border: none;
+    color: #000000;
+    border-radius: 3em;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 12px 2px;
+    cursor: pointer;
+}
+
+/* text on right side of total bpx */
+.totalPrice{
+    align-self: flex-end;
+    flex: 1;
+    text-align: right;
+    margin-right: 1em;
+
+}
+/* text on left side of total bpx */
+.totalText
+{
+margin-left: 1em;
+}
+/* <div class="totalcontainer" id="totalcontainer">
+       <div class="totalItemCost">
+           <div><p>Item(s):</p></div>
+           <div><p>Farm Eggs</p></div>
+       </div>
+       <div class="totalDeliveryFee">
+           <div><p>Delivery fee:</p></div>
+           <div><p>Farm Eggs</p></div>
+       </div>
+       <div class="totalDevider"></div>
+       <div class="totalTotalCost">
+           <div><p>Total:</p></div>
+           <div><p>Farm Eggs</p></div>
+       </div>
+       <button class="procedeToCheckout">Proceed to Checkout</button>
+
+    </div> */
