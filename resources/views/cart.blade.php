@@ -121,7 +121,7 @@
                     <p>$40.98</p>
                 </div>
             </div>
-            <button class="procedeToCheckout">Proceed to Checkout</button>
+            <button class="procedeToCheckout"><i class="fas fa-shield-alt"></i>Proceed to Checkout</button>
 
         </div>
     </div>

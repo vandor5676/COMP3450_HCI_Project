@@ -190,10 +190,8 @@ margin: 0.5em;
         margin-left: 1.5em;
     }
 }
-.totalWraper
-{
 
-}
+/* cart totals */
 .totalcontainer
 {
     font-family: 'Segoe UI','Oswald', 'sans-serif';       
@@ -217,7 +215,7 @@ margin: 0.5em;
 .totalDevider
 {
     background-color: #201F1F;
-    height: 2px;
+    height: 3px;
     margin-bottom: 0.5em;
     margin-top: 0.3em;
 }
@@ -254,6 +252,33 @@ margin: 0.5em;
 .totalText
 {
 margin-left: 1em;
+}
+.fa-shield-alt
+{
+    position: relative;
+font-size: 25px;
+margin-right: 10px;
+top: 3px;
+
+}
+
+@media (max-width: 1040px) {
+    .totalWraper
+    {
+        background-color: #464646;
+    }
+    .totalcontainer
+    {
+        max-width: 100%;
+        padding: 0.5em 0 0.5em 0;
+       margin-bottom: 0;
+       color: white;
+    }
+    .totalDevider
+    {
+        background-color: white ;
+    }
+
 }
 /* <div class="totalcontainer" id="totalcontainer">
        <div class="totalItemCost">
