@@ -25,10 +25,6 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/services', function () {
-    return view('services');
-});
-
 Route::get('/youthemployment', function () {
     return view('youthemployment');
 });
