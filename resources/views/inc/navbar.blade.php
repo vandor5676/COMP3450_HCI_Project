@@ -20,13 +20,13 @@
     <!-- first set or items -->
     <div class="navbarItems">
       <div class="navbarItem">
-        <a>SHOP</a>
+        <a class="navbarLink" href="shop">SHOP</a>
       </div>
       <div class="verticalCenterContainer">
         <div class="devider"></div>
       </div>
       <div class="navbarItem">
-        <a>VENDOR</a>
+        <a class="navbarLink" href="vendors">VENDORS</a>
       </div>
     </div>
     <!-- logo -->
@@ -39,7 +39,7 @@
     <div class="navbarItems">
 
       <div class="navbarItem">
-        <a>ACCOUNT</a>
+        <a class="navbarLink" href="account">ACCOUNT</a>
       </div>
 
       <div class="verticalCenterContainer">
