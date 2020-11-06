@@ -1,0 +1,299 @@
+.banner
+{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/cart/bannerapplesSmall.jpg);
+    height: 7cm;
+}
+.bannerImage
+{
+    width: 100%;
+    
+}
+.content#cart
+{
+    background-color: #F2F2F2;
+    height: 1000px;
+}
+.bannerTitle
+{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7cm;
+      font-size: 6em;
+      font-family: 'Oswald', sans-serif;
+      color: white;
+}
+.cartContainer
+{
+    display: flex;
+}
+.content#itemsContainer
+{
+   
+    height: auto;
+    /* background-color: violet; */
+    /* max-width: 90em;
+    margin: auto; */
+    flex: 7;
+}
+.totalWraper
+{
+    flex: 3;
+}
+
+/* items in cart */
+.cartItem
+{
+    /* height: 100px; */
+    background-color: #E8E8E8;
+    max-width: 85%;
+    margin: auto;
+    margin-top: 1em;
+    margin-right: 0;
+    border-radius: 0.8em;
+
+    display: flex;
+}
+.imageTextContainer
+{
+    display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+
+}
+.image
+{
+    max-width: 10em;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.image > img
+{
+    /* flex: 1; */
+    /* background-image: url("/images/logo.png"); */
+    height: auto;
+    padding: 1em;
+    display: block;
+    /* height: 100%; */
+    width: 100%;
+    /* vertical-align: middle; */
+}
+.text
+{
+    font-family: 'Segoe UI','Oswald', 'sans-serif';
+    vertical-align: left;
+display: flex;
+align-items: center;
+}
+.text > div > p#title
+{
+font-size: 1.5em;
+}
+.text > div > p#subtitle
+{
+    font-size: 1em;
+}
+.text > div > p#stock
+{
+    font-size: 1em;
+    color: #3FA87E;
+
+}
+.quantity
+{
+
+}
+.quantityFrame
+{
+background-color: #707070;
+border-radius: 2em;
+margin-top: 1.4em;
+}
+.priceRemove
+{
+    position: relative;
+    width: auto;
+    font-family: 'Segoe UI','Oswald', 'sans-serif';
+}
+.price
+{
+padding: 2em;
+}
+.remove
+{
+position: absolute;
+bottom: 0;
+left: 0;
+margin: 0.5em;
+
+}
+.remove > i{
+    margin-right: 0.5em;
+}
+
+
+@media (max-width: 1040px) {
+    .content#itemsContainer, .content#totalcontainer {
+      display: block;
+    }
+    .cartContainer
+    {
+        display: block;
+    }
+    .cartItem
+    {
+        max-width: 100%;
+        margin: auto;
+        margin-top: 1em;
+        border-radius: 0.8em;
+        height: auto;
+    }
+    .text
+    {
+       
+        margin-right: 1.5em;
+    }
+    .image
+    {
+        display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text > div > p#title
+    {
+    font-size: 1.5em;
+    }
+    .text > div > p#subtitle
+    {
+        font-size: 1em;
+    }
+    .text > div > p#stock
+    {
+        font-size: 1em;
+    }
+
+    .image > img
+    {
+        padding-bottom: 0em;
+    }
+
+}
+@media (max-width: 564px) {
+    .text
+    {
+       
+        margin-left: 1.5em;
+    }
+}
+
+/* cart totals */
+.totalcontainer
+{
+    font-family: 'Segoe UI','Oswald', 'sans-serif';       
+    font-size: 1.5em;
+    height: auto;
+    /* background-color: rgb(95, 32, 95); */
+    margin: 1em;
+    max-width: 13em;
+}
+
+.totalItemCost
+{
+    display: flex;
+    align-content: space-between;
+}
+
+.totalDeliveryFee
+{
+    display: flex;
+}
+.totalDevider
+{
+    background-color: #201F1F;
+    height: 3px;
+    margin-bottom: 0.5em;
+    margin-top: 0.3em;
+}
+.totalTotalCost
+{
+    display: flex;
+}
+.procedeToCheckout
+{
+    display: block;
+    width: 100%;
+    background-color:#93E676;
+    border: none;
+    color: #000000;
+    border-radius: 3em;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 12px 2px;
+    cursor: pointer;
+}
+
+/* text on right side of total bpx */
+.totalPrice{
+    align-self: flex-end;
+    flex: 1;
+    text-align: right;
+    margin-right: 1em;
+
+}
+/* text on left side of total bpx */
+.totalText
+{
+margin-left: 1em;
+}
+.fa-shield-alt
+{
+    position: relative;
+font-size: 25px;
+margin-right: 10px;
+top: 3px;
+
+}
+
+@media (max-width: 1040px) {
+    .totalWraper
+    {
+        background-color: #464646;
+    }
+    .totalcontainer
+    {
+        max-width: 100%;
+        padding: 0.5em 0 0.5em 0;
+       margin-bottom: 0;
+       color: white;
+    }
+    .totalDevider
+    {
+        background-color: white ;
+    }
+
+}
+/* <div class="totalcontainer" id="totalcontainer">
+       <div class="totalItemCost">
+           <div><p>Item(s):</p></div>
+           <div><p>Farm Eggs</p></div>
+       </div>
+       <div class="totalDeliveryFee">
+           <div><p>Delivery fee:</p></div>
+           <div><p>Farm Eggs</p></div>
+       </div>
+       <div class="totalDevider"></div>
+       <div class="totalTotalCost">
+           <div><p>Total:</p></div>
+           <div><p>Farm Eggs</p></div>
+       </div>
+       <button class="procedeToCheckout">Proceed to Checkout</button>
+
+    </div> */

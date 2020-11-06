@@ -4,19 +4,23 @@
     box-sizing: border-box;
 
   }
-  
+  @font-face {
+    font-family: BarlowCondensed;
+    src: url('fonts\\BarlowCondensed-SemiBold.ttf');
+    /* src: url({{asset('/public/fonts/BarlowCondensed-SemiBold.ttf')}}); */
+    
+}
 
-li a {
+.navbarLink {
+
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    /* padding: 14px 16px; */
     text-decoration: none;
   }
   img.cart
   {
-      /* background-color: rgb(19, 143, 143); */
-
     vertical-align: middle;
     max-height: 2em;
     max-width: 2em;
@@ -24,14 +28,14 @@ li a {
   }
   div.bar {
    background-color: rgb(70,70,70);
-   font-family: 'Ebrima', sans-serif;
+   font-family: 'BarlowCondensed','Ebrima', sans-serif;
    height: 3em;
 
    display: flex;
    justify-content: space-between;
-   z-index: 1;
+   position: relative;
+   z-index: 1000;
    transition: all 0.3s ease-in-out;
-   /* font-size: 2rem; */
 
   }
   div.navbarItems
@@ -59,8 +63,6 @@ li a {
     position:absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
-
-
   }
   .navbarItem>a{
     color: #FFFFFF;
@@ -69,27 +71,8 @@ li a {
   {
     max-width: 6em;
     height: auto;
-    /* width: 7em; */
   }
   @media only screen and (max-width: 658px) {
-    div.bar {
-      background-color: rgb(70,70,70);
-   font-family: 'Ebrima', sans-serif;
-
-
-   display: flex;
-   justify-content: space-between;
-   z-index: 1;
-   transition: all 0.3s ease-in-out;
-   /* font-size: 2rem; */
-    width: 100%;
-    }
-    /* .navbarItem:not(:first-child) {display: none;}
-    .navbarItem a.icon {
-      float: right;
-      display: block;
-    } */
-
     div.navbarItem
     {
         
@@ -99,16 +82,16 @@ li a {
         margin-right: 10px;
       
     }
-    .navbar__logo-container
-    {
-     
-    }
     .logo
     {
       display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3em;
-
+      justify-content: center;
+      align-items: center;
+      height: 3em;
     }
+    .navbarLogo
+  {
+    max-width: 3em;
+    height: auto;
+  }
   }
