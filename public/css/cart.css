@@ -114,6 +114,35 @@ background-color: #707070;
 border-radius: 2em;
 margin-top: 1.4em;
 }
+.quantityWraper
+{
+    display: flex;
+}
+.quantityWraper >div
+{
+    flex: 1;
+    margin-top: 1em;
+}
+.QuantityInput
+{
+    max-width: 50px;
+    height: 30px;
+    border: none;
+    text-align: center;
+}
+.QuantityButton
+{
+    height: 30px;
+    width: 30px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
 .priceRemove
 {
     position: relative;

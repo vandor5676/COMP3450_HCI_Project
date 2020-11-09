@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/cartDropDown.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 </head>
@@ -31,15 +31,11 @@
             </div>
 
             <div class="quantity" id="quantity">
-                <div class="quantityFrame">
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Quantity</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="">1</a>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                        </div>
-                    </div>
+                <div class="quantityWraper">
+
+                    <div> <button class="QuantityButton">-</button> </div>
+                    <div> <input class="QuantityInput" value="1" type="number"></div>
+                    <div> <button class="QuantityButton">+</button></div>
                 </div>
             </div>
             <div class="priceRemove" id="priceRemove">
@@ -68,15 +64,11 @@
                 </div>
 
                 <div class="quantity" id="quantity">
-                    <div class="quantityFrame">
-                        <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn">Quantity</button>
-                            <div id="myDropdown" class="dropdown-content">
-                                <a href="">1</a>
-                                <a href="">2</a>
-                                <a href="">3</a>
-                            </div>
-                        </div>
+                    <div class="quantityWraper">
+
+                        <div> <button class="QuantityButton">-</button> </div>
+                        <div> <input class="QuantityInput" value="1" type="number"></div>
+                        <div> <button class="QuantityButton">+</button></div>
                     </div>
                 </div>
                 <div class="priceRemove" id="priceRemove">
@@ -114,7 +106,7 @@
             <!-- devider -->
             <div class="totalDevider"></div>
             <div class="totalTotalCost">
-                <div class="totalText"> 
+                <div class="totalText">
                     <p>Total:</p>
                 </div>
                 <div class="totalPrice">
