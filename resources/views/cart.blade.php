@@ -124,7 +124,53 @@
 
 
 <script>
-$(".totalTotalCost").html = localStorage.getItem("lastname");
+    //get items from session storge
+var items = JSON.parse(sessionStorage.getItem("items"));
+
+//build an html display string
+var displayString = ""
+if(items == null)
+var displayString = "no items"
+
+if(items != null)
+for(i=0;i<items.length;i++)
+{
+   displayString +=  " <div class='content' id='itemsContainer'>"+
+        "<div class='cartItem'>"+
+            "<div class='imageTextContainer'>"+
+                "<div class='image' id='image' style='display: inline-block;'>"+
+                    "<img class='cartItemImage' src={{asset('/images/logo.png')}} alt='logo'>"+
+                "</div>"+
+                "<div class='text' id='text'>"+
+                    "<div>"+
+                        "<p id='title'>Farm Eggs</p>"+
+                        "<p id='subtitle'>Thistle Farm</p>"+
+                        "<p id='stock'>In Stock</p>"+
+                    "</div>"+
+                "</div>"+
+            "</div>"+
+
+            "<div class='quantity' id='quantity'>"+
+                "<div class='quantityWraper'>"+
+
+                    "<div> <button class='QuantityButton'>-</button> </div>"+
+                    "<div> <input class='QuantityInput' value='1' type='number'></div>"+
+                    "<div> <button class='QuantityButton'>+</button></div>"+
+                "</div>"+
+            "</div>"+
+            "<div class='priceRemove' id='priceRemove'>"+
+                "<div class='price'>"+
+                    "<p>$2.99</p>"+
+                "</div>"+
+                "<div class='remove'>"+
+                    "<i class='fa fa-trash' aria-hidden='true'></i>Remove"+
+                "</div>"+
+            "</div>"+
+        "</div>"
+        
+}
+//display the string
+$(".content#itemsContainer").html(displayString);
 </script>
 </body>
 

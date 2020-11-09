@@ -13,8 +13,20 @@
         <p>Checkout</p>
     </div>
 </div>
+<div>
+    <button onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', null,1,2.99)" style="width: 100px; height:100px;"></button>
+</div>
 
 <script>
-localStorage.setItem("lastname", "Smith");
+
+var itemArray = [];
+
+
+function addItem(itemName, farmName, stockText, imageLocation, quantity, price )
+{
+    var item = {itemName:itemName, farmName:farmName, stockText:stockText,imageLocation:imageLocation,quantity:quantity,price:price };
+    itemArray.push(item);
+    sessionStorage.setItem("items", JSON.stringify(itemArray));
+}
 </script>
 @endsection
