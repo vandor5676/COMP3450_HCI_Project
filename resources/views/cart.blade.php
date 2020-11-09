@@ -3,12 +3,12 @@
 
 <head>
     <link rel="stylesheet" href="css/cart.css">
-
+    <link rel="stylesheet" href="css/banners.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 </head>
 
-<div class="banner">
+<div class="banner" id="cart">
     <div class="bannerTitle">
         <p>Cart</p>
     </div>
@@ -113,7 +113,7 @@
                     <p>$40.98</p>
                 </div>
             </div>
-            <button class="procedeToCheckout"><i class="fas fa-shield-alt"></i>Proceed to Checkout</button>
+            <a href="checkout"><button class="procedeToCheckout"><i class="fas fa-shield-alt"></i>Proceed to Checkout</button></a>
 
         </div>
     </div>
@@ -124,23 +124,7 @@
 
 
 <script>
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
+$(".totalTotalCost").html = localStorage.getItem("lastname");
 </script>
 </body>
 

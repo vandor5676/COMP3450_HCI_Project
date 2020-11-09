@@ -33,3 +33,7 @@ Route::get('/youthemployment', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
+//rout for checkout page
+Route::get('/checkout', function () {
+    return view('checkout');
+});

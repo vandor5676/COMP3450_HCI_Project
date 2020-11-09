@@ -1,32 +1,10 @@
-.banner
-{
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/cart/bannerapplesSmall.jpg);
-    height: 7cm;
-}
-.bannerImage
-{
-    width: 100%;
-    
-}
+
 .content#cart
 {
     background-color: #F2F2F2;
     height: 1000px;
 }
-.bannerTitle
-{
-    display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 7cm;
-      font-size: 6em;
-      font-family: 'Oswald', sans-serif;
-      color: white;
-}
+
 .cartContainer
 {
     display: flex;
@@ -143,6 +121,15 @@ margin-top: 1.4em;
     font-size: 16px;
     cursor: pointer;
 }
+/* for input arrow removal */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}input[type=number] {
+    -moz-appearance: textfield;
+  }
+
 .priceRemove
 {
     position: relative;
