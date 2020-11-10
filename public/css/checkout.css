@@ -1,0 +1,112 @@
+p{
+    margin-bottom: 0rem;
+}
+.mainContainer
+{
+    background-color: #E8E8E8;
+    max-width: 85%;
+    margin: auto;
+    margin-top: 1em;
+    margin-right: 0;
+    border-radius: 0.8em;
+    
+}
+.MainContainerContent
+{
+    margin: 0 1em;
+}
+.checkoutDevider
+{
+    background-color: #575757;
+    height: 1px;
+    margin: 0.5em 0em;
+}
+
+.paymentOptionsContainer
+{
+    font-family: 'Segoe UI', 'sans-serif';
+    font-size: 1.5em;
+    padding: 1rem 0;
+}
+.paymentOptions
+{
+margin-bottom: 0rem;
+
+}
+/* credit card  */
+.creditCardContainer
+{
+    display: flex;    
+    /* flex-wrap: wrap; */
+}
+.creditcartImage
+{
+flex: 1;
+max-width: 7em;
+
+}
+.creditcartImage img{
+    max-width: 7em;
+    
+}
+.creditCardNumber
+{
+    /* flex: 1; */
+    flex-grow: 1;
+    margin-left: 1em;
+}
+.creditCardDelete
+{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creditcardX
+{
+    color: rgb(104, 104, 104);
+}
+.creditcardX:hover
+{
+    color: rgb(43, 43, 43);
+}
+
+/* new card */
+.creditCardInput
+{
+    width: 100%;
+    background-color: #E8E8E8;
+    margin: 3px 0;
+    border: none;
+    outline: none;
+}
+.newCardP
+{
+    font-family: 'Segoe UI', 'sans-serif';
+    font-size: 1.5em;
+    padding: 1rem 0;
+}
+
+
+
+
+@media (max-width: 1040px) {
+    .mainContainer
+    {
+        max-width: 100%;
+    }
+}
+
+
+/* <div class="imageTextContainer">               
+                <div class="paymentOptionsContainer">
+                    <p>Payment options</p>
+                </div>
+                <div class="creditCardContainer">
+                   <div class="creditcartImage"><img src={{asset("/images/logo.png")}} alt="logo"></div>
+                   <div class="creditCardNumber"><p>XXXX-XXXX-XXXX-1234</p></div>
+                   <div class="creditCardDelete">X</div>
+                </div>              
+                <div class="newCreditCardContainer">
+                    <p>cards</p>
+                </div>              
+            </div> */
