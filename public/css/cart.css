@@ -23,6 +23,13 @@
     flex: 3;
 }
 
+.noItemsContainer p
+{
+    text-align:center; 
+    vertical-align: middle;
+    display: table-cell;   
+    line-height: 100px;
+}
 /* items in cart */
 .cartItem
 {

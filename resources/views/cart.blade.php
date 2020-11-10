@@ -83,6 +83,18 @@
             </div>
 
         </div>
+        <!-- cart item -->
+        <div class="content" id="itemsContainer">
+            <div class="cartItem">
+                <div class="imageTextContainer">
+                    <div style="flex: 1;"></div>
+                    <div class="noItemsContainer">
+                        <p>Your cart is empty</p>
+                    </div>
+                    <div style="flex: 1;"></div>
+                </div>
+            </div>
+        </div>
         <!-- end of cart items -->
     </div>
     <!-- total -->
@@ -93,7 +105,7 @@
                     <p>Item(s):</p>
                 </div>
                 <div class="totalPrice">
-                    <p>$34.99</p>
+                    <p class="subtotal">$34.99</p>
                 </div>
             </div>
             <div class="totalDeliveryFee">
@@ -101,7 +113,7 @@
                     <p>Delivery fee:</p>
                 </div>
                 <div class="totalPrice">
-                    <p>$5.99</p>
+                    <p class="deliveryFee">$5.99</p>
                 </div>
             </div>
             <!-- devider -->
@@ -111,7 +123,7 @@
                     <p>Total:</p>
                 </div>
                 <div class="totalPrice">
-                    <p>$40.98</p>
+                    <p class="total">$40.98</p>
                 </div>
             </div>
             <a href="checkout"><button class="procedeToCheckout"><i class="fas fa-shield-alt"></i>Proceed to Checkout</button></a>
@@ -162,7 +174,8 @@
         items[i].quantity = quantity;
         var price = items[i].price;
         $(".cartItem#" + i + " #price" + i).text("$" + (price * quantity).toFixed(2));
-        updateModel();
+        setModel();
+        calculateAndDisplayTotals();
     }
     //
     //end quantity validation
@@ -170,19 +183,34 @@
 
     function deleteFromModel(i) {
         items.splice(i, 1);
-        updateModel();
+        setModel();
         displayItems();
     }
 
-    function updateModel() {
+    function setModel() {
         sessionStorage.setItem("items", JSON.stringify(items));
     }
 
+    function calculateAndDisplayTotals() {
+        var subTotal = 0;
+        var deliveryFee = 0;
+        if (items != null) {
+            for (i = 0; i < items.length; i++) {
+                subTotal += (items[i].quantity * items[i].price);
+            }
+        }
+        if(subTotal!=0)
+        deliveryFee = 2.99;
+        var total = subTotal + deliveryFee;
+        $(".subtotal").text("$" + subTotal.toFixed(2));
+        $(".deliveryFee").text("$" + deliveryFee.toFixed(2));
+        $(".total").text("$" + total.toFixed(2));
+
+    }
 
     //
     //for displaing data
     //
-
 
     //build an html display string
     function displayItems() {
@@ -190,8 +218,19 @@
         items = JSON.parse(sessionStorage.getItem("items"));
 
         var displayString = ""
-        if (items == null)
-            var displayString = "no items"
+        if (items == null || items.length == 0)
+            var displayString =
+                "<div class='content' id='itemsContainer'>" +
+                "<div class='cartItem'>" +
+                "<div class='imageTextContainer'>" +
+                "<div style='flex: 1;'></div>" +
+                "<div class='noItemsContainer'>" +
+                "<p>Your cart is empty</p>" +
+                "</div>" +
+                "<div style='flex: 1;'></div>" +
+                "</div>" +
+                "</div>" +
+                "</div>"
 
         if (items != null)
             for (i = 0; i < items.length; i++) {
@@ -233,8 +272,8 @@
             }
         //display the string
         $(".content#itemsContainer").html(displayString);
+        calculateAndDisplayTotals();
     }
-
 
     //
     // end displaing data
