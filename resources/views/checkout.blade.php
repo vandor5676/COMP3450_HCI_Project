@@ -14,14 +14,14 @@
     </div>
 </div>
 <div>
-    <button onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', null,1,2.99)" style="width: 100px; height:100px;"></button>
+    <button onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/logo.png',1,2.99)" style="width: 100px; height:100px;"></button>
 </div>
 
 <script>
 
 var itemArray = [];
-
-
+if( JSON.parse(sessionStorage.getItem("items")) !=null)
+itemArray = JSON.parse(sessionStorage.getItem("items"));
 function addItem(itemName, farmName, stockText, imageLocation, quantity, price )
 {
     var item = {itemName:itemName, farmName:farmName, stockText:stockText,imageLocation:imageLocation,quantity:quantity,price:price };

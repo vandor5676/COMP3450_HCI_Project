@@ -52,7 +52,7 @@
             <div class="cartItem">
                 <div class="imageTextContainer">
                     <div class="image" id="image" style="display: inline-block;">
-                        <img class="cartItemImage" src={{asset("/images/logo.png")}} alt="logo">
+                        <img class="cartItemImage" src={{asset('/images/logo.png')}} alt="logo">
                     </div>
                     <div class="text" id="text">
                         <div>
@@ -66,9 +66,9 @@
                 <div class="quantity" id="quantity">
                     <div class="quantityWraper">
 
-                        <div> <button class="QuantityButton">-</button> </div>
+                        <div> <button class="QuantityButton" id="subtract">-</button> </div>
                         <div> <input class="QuantityInput" value="1" type="number"></div>
-                        <div> <button class="QuantityButton">+</button></div>
+                        <div> <button class="QuantityButton" id="add">+</button></div>
                     </div>
                 </div>
                 <div class="priceRemove" id="priceRemove">
@@ -76,7 +76,8 @@
                         <p>$2.99</p>
                     </div>
                     <div class="remove">
-                        <i class="fa fa-trash" aria-hidden="true"></i>Remove
+                        <button class='removeButton' onclick=''> <i class='fa fa-trash' aria-hidden='true'></i>Remove</button>
+
                     </div>
                 </div>
             </div>
@@ -124,53 +125,120 @@
 
 
 <script>
-    //get items from session storge
-var items = JSON.parse(sessionStorage.getItem("items"));
+    var items;
+    displayItems();
+    //
+    //quantity validation and display update
+    //
 
-//build an html display string
-var displayString = ""
-if(items == null)
-var displayString = "no items"
+    //quantity subtract
+    function subtractQuantity(i) {
+        var curentVal = $(".cartItem#" + i + " .QuantityInput").val();
+        curentVal--;
+        if (curentVal < 1) {
+            curentVal = 1;
+        }
+        $(".cartItem#" + i + " .QuantityInput").val(curentVal);
+        updateQuantityInModel(i, curentVal);
+    }
+    //quantity add
+    function addQuantity(i) {
+        var curentVal = $(".cartItem#" + i + " .QuantityInput").val();
+        curentVal++;
+        $(".cartItem#" + i + " .QuantityInput").val(curentVal);
+        updateQuantityInModel(i, curentVal);
+    }
+    //quantity input loses focus
+    function checkValidQuantity(i) {
+        var curentVal = $(".cartItem#" + i + " .QuantityInput").val();
+        if (curentVal < 1) {
+            curentVal = 1;
+        }
+        $(".cartItem#" + i + " .QuantityInput").val(curentVal);
+        updateQuantityInModel(i, curentVal);
+    }
 
-if(items != null)
-for(i=0;i<items.length;i++)
-{
-   displayString +=  " <div class='content' id='itemsContainer'>"+
-        "<div class='cartItem'>"+
-            "<div class='imageTextContainer'>"+
-                "<div class='image' id='image' style='display: inline-block;'>"+
-                    "<img class='cartItemImage' src={{asset('/images/logo.png')}} alt='logo'>"+
-                "</div>"+
-                "<div class='text' id='text'>"+
-                    "<div>"+
-                        "<p id='title'>Farm Eggs</p>"+
-                        "<p id='subtitle'>Thistle Farm</p>"+
-                        "<p id='stock'>In Stock</p>"+
-                    "</div>"+
-                "</div>"+
-            "</div>"+
+    function updateQuantityInModel(i, quantity) {
+        items[i].quantity = quantity;
+        var price = items[i].price;
+        $(".cartItem#" + i + " #price" + i).text("$" + (price * quantity).toFixed(2));
+        updateModel();
+    }
+    //
+    //end quantity validation
+    //
 
-            "<div class='quantity' id='quantity'>"+
-                "<div class='quantityWraper'>"+
+    function deleteFromModel(i) {
+        items.splice(i, 1);
+        updateModel();
+        displayItems();
+    }
 
-                    "<div> <button class='QuantityButton'>-</button> </div>"+
-                    "<div> <input class='QuantityInput' value='1' type='number'></div>"+
-                    "<div> <button class='QuantityButton'>+</button></div>"+
-                "</div>"+
-            "</div>"+
-            "<div class='priceRemove' id='priceRemove'>"+
-                "<div class='price'>"+
-                    "<p>$2.99</p>"+
-                "</div>"+
-                "<div class='remove'>"+
-                    "<i class='fa fa-trash' aria-hidden='true'></i>Remove"+
-                "</div>"+
-            "</div>"+
-        "</div>"
-        
-}
-//display the string
-$(".content#itemsContainer").html(displayString);
+    function updateModel() {
+        sessionStorage.setItem("items", JSON.stringify(items));
+    }
+
+
+    //
+    //for displaing data
+    //
+
+
+    //build an html display string
+    function displayItems() {
+        //get items from session storge
+        items = JSON.parse(sessionStorage.getItem("items"));
+
+        var displayString = ""
+        if (items == null)
+            var displayString = "no items"
+
+        if (items != null)
+            for (i = 0; i < items.length; i++) {
+                //wierd blade workaround
+                document.cookie = "imageSrc=" + items[i].imageLocation + ";";
+                displayString += " <div class='content' id='itemsContainer'>" +
+                    "<div class='cartItem' id = '" + i + "'>" +
+                    "<div class='imageTextContainer'>" +
+                    "<div class='image' id='image' style='display: inline-block;'>" +
+                    "<img class='cartItemImage' src={{asset((isset($_COOKIE['imageSrc'])?$_COOKIE['imageSrc']:'/images/logo.png'))}} alt='logo'>" +
+                    "</div>" +
+                    "<div class='text' id='text'>" +
+                    "<div>" +
+                    "<p id='title'>" + items[i].itemName + "</p>" +
+                    "<p id='subtitle'>" + items[i].farmName + "</p>" +
+                    "<p id='stock'>" + items[i].stockText + "</p>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>" +
+
+                    "<div class='quantity' id='quantity'>" +
+                    "<div class='quantityWraper'>" +
+
+                    "<div> <button class='QuantityButton' onclick='subtractQuantity(" + i + ")'>-</button> </div>" +
+                    "<div> <input class='QuantityInput' onfocusout = 'checkValidQuantity(" + i + ")' value='" + items[i].quantity + "' type='number'></div>" +
+                    "<div> <button class='QuantityButton' onclick='addQuantity(" + i + ")'>+</button></div>" +
+                    "</div>" +
+                    "</div>" +
+                    "<div class='priceRemove' id='priceRemove'>" +
+                    "<div class='price'>" +
+                    "<p id='price" + i + "'>$" + (items[i].quantity * items[i].price).toFixed(2) + "</p>" +
+                    "</div>" +
+                    "<div class='remove'>" +
+                    "<button class='removeButton' onclick = 'deleteFromModel(" + i + ")'> <i class='fa fa-trash' aria-hidden='true'></i> Remove</button>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>"
+
+            }
+        //display the string
+        $(".content#itemsContainer").html(displayString);
+    }
+
+
+    //
+    // end displaing data
+    //
 </script>
 </body>
 
