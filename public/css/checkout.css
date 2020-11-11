@@ -14,6 +14,7 @@ p{
 .MainContainerContent
 {
     margin: 0 1em;
+    padding-bottom: 1em;
 }
 .checkoutDevider
 {
@@ -33,21 +34,54 @@ p{
 margin-bottom: 0rem;
 
 }
+.addButton
+{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 10px ;
+    border-radius: 3px;
+    /* float: right; */
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+}
 /* credit card  */
 .creditCardContainer
 {
     display: flex;    
+    cursor: pointer;
     /* flex-wrap: wrap; */
+}
+.creditCardContainer:hover 
+{
+    /* color: rgb(243, 243, 243); */
+   
 }
 .creditcartImage
 {
 flex: 1;
 max-width: 7em;
-
 }
 .creditcartImage img{
     max-width: 7em;
     
+}
+.checkCircle
+{
+    position: relative;
+    /* left: 10px; */
+    color: #ddffc3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -16px;
+    left: 87px;
+    margin-bottom: 7px;
 }
 .creditCardNumber
 {
@@ -79,7 +113,7 @@ max-width: 7em;
     border: none;
     outline: none;
 }
-.newCardP
+.headerP
 {
     font-family: 'Segoe UI', 'sans-serif';
     font-size: 1.5em;
