@@ -83,6 +83,17 @@ max-width: 7em;
     left: 87px;
     margin-bottom: 7px;
 }
+.checkCircleAddress
+{
+    position: relative;
+    color: #1b3f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -8px;
+    left: 47px;
+    margin-bottom: -6px;
+}
 .creditCardNumber
 {
     /* flex: 1; */
@@ -120,7 +131,12 @@ max-width: 7em;
     padding: 1rem 0;
 }
 
-
+/* click cintainers */
+.addressClick
+{
+    display: flex;
+    flex: auto;
+}
 
 
 @media (max-width: 1040px) {

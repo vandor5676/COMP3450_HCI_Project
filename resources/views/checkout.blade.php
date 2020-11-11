@@ -48,19 +48,23 @@
                 <!-- address -->
                 <p class="headerP">Address</p>
                 <div class="checkoutDevider"></div>
-                <div class="creditCardContainer">
-                    <div class="creditcartImage"><i class="fas fa-home fa-lg"></i></div>
-                    <div class="creditCardNumber">
-                        <p>1740 18th ave NE</p>
+                <div class="addressInject">
+                    <div class="creditCardContainer">
+                        <div class="addressClick">
+                            <div class="creditcartImage"><i class="fas fa-home fa-lg"></i></div>
+                            <div class="creditCardNumber">
+                                <p>1740 18th ave NE</p>
+                            </div>
+                        </div>
+                        <div class="creditCardDelete"><i class="fas fa-times fa-lg creditcardX"></i></div>
                     </div>
-                    <div class="creditCardDelete"><i class="fas fa-times fa-lg creditcardX"></i></div>
+                    <div class="checkoutDevider"></div>
                 </div>
-                <div class="checkoutDevider"></div>
                 <!-- new address -->
                 <p class="headerP">New Address</p>
-                <input class="creditCardInput" type="text" placeholder="Address">
+                <input class="creditCardInput" id="addressInput" type="text" placeholder="Address" value="1740 18th ave NE">
                 <div class="checkoutDevider"></div>
-                <button class="addButton" id="address">Add</button>
+                <button class="addButton" id="address" onclick="addAddress()">Add</button>
             </div>
         </div>
     </div>
@@ -104,6 +108,86 @@
 </div>
 
 <script>
+    //get addresses from sessionVariable
+    var addressArray = [];
+    if (JSON.parse(sessionStorage.getItem("addresses")) != null)
+        addressArray = JSON.parse(sessionStorage.getItem("addresses"));
+    displayAddresses();
+
+    //get cards
+    function updateSessionWithAddresses() {
+        sessionStorage.setItem("addresses", JSON.stringify(addressArray));
+    }
+    //
+    //display addresses
+    //
+    function displayAddresses() {
+        var addressString = ""
+        if (addressArray == null || addressArray.length == 0)
+            addressString = "No saved addresses";
+        if (addressArray != null) {
+            for (i = 0; i < addressArray.length; i++) {
+                addressString +=
+                    "<div class='creditCardContainer'>" +
+                    "<div class='addressClick' onclick = 'displayCheckCircleOnAddress(" + i + ")'>" +
+                "<i class='far fa-check-circle checkCircleAddress fa-1x' id='checkCircleAddress" + i + "' ></i>" +
+                    "<div class='creditcartImage'><i class='fas fa-home fa-lg'></i></div>" +
+                    "<div class='creditCardNumber'>" +
+                    "<p>"+addressArray[i].addressValue+"</p>" +
+                    "</div>" +
+                    "</div>" +
+                    "<div class='creditCardDelete'><i class='fas fa-times fa-lg creditcardX' onclick='deleteAddress(" + i + ")'></i></div>" +
+                    "</div>" +
+                    "<div class='checkoutDevider'></div>"
+            }
+        }
+         $(".addressInject").html(addressString);
+         clearAllAddressCheckCircles();
+    }
+
+    //
+    //add new address
+    //
+    function addAddress() {
+        addressValue = $("#addressInput").val();
+
+        var address = {
+            addressValue: addressValue
+        };
+        addressArray.push(address);
+        sessionStorage.setItem("addresses", JSON.stringify(addressArray));
+        displayAddresses();
+    }
+
+    //display Check mark Address
+    function displayCheckCircleOnAddress(i) {
+        clearAllAddressCheckCircles();
+        $("#checkCircleAddress" + i).css("display", "flex")
+    }
+
+    //delete an address
+    function deleteAddress(i) {
+        addressArray.splice(i, 1);
+        updateSessionWithAddresses();
+        displayAddresses();
+        clearAllAddressCheckCircles();
+    }
+
+    //clears all of the checkcircles on the addresses
+    function clearAllAddressCheckCircles() {
+        $(".checkCircleAddress").each(function() {
+            $(this).css("display", "none")
+        })
+    }
+
+
+    //
+    //vvv for creditcards vvv
+    //
+
+
+
+
     //get cards from sessionVariable
     var cardArray = [];
     if (JSON.parse(sessionStorage.getItem("cards")) != null)
@@ -146,7 +230,16 @@
     function displayCreditcards() {
         var cardString = ""
         if (cardArray == null || cardArray.length == 0)
-            cardString = "no Cards";
+            cardString =
+            "<div class='content' id='itemsContainer'>" +
+            "<div class='imageTextContainer'>" +
+            "<div style='flex: 1;'></div>" +
+            "<div class='noItemsContainer'>" +
+            "<p>No cards saved</p>" +
+            "</div>" +
+            "<div style='flex: 1;'></div>" +
+            "</div>" +
+            "</div>"
         if (cardArray != null) {
             for (i = 0; i < cardArray.length; i++) {
                 cardString +=
@@ -154,7 +247,7 @@
                     "<i class='far fa-check-circle checkCircle fa-2x' id='checkCircle" + i + "' onclick = 'displayCheckCircle(" + i + ")'></i>" +
                     "<div class='creditcartImage'><img src={{asset('/images/logo.png')}} alt='logo" + i + "'></div>" +
                     "<div class='creditCardNumber'>" +
-                    "<p>XXXX-XXXX-XXXX-4234</p>" +
+                    "<p>XXXX-XXXX-XXXX-" + cardArray[i].cardNumber.slice(cardArray[i].cardNumber.length - 4) + "</p>" +
                     "</div>" +
                     "<div class='creditCardDelete' onclick='deleteCreditCard(" + i + ")'><i class='fas fa-times fa-lg creditcardX'></i></div>" +
                     "</div>" +
@@ -174,7 +267,7 @@
         clearAllCardCheckCircle();
         $("#checkCircle" + i).css("display", "flex")
     }
-    
+
     //delete a card
     function deleteCreditCard(i) {
         cardArray.splice(i, 1);
