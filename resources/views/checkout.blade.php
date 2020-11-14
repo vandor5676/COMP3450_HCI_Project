@@ -65,6 +65,8 @@
                 <input class="creditCardInput" id="addressInput" type="text" placeholder="Address" value="1740 18th ave NE">
                 <div class="checkoutDevider"></div>
                 <button class="addButton" id="address" onclick="addAddress()">Add</button>
+
+
             </div>
         </div>
     </div>
@@ -97,7 +99,7 @@
                     <p class="total">$40.98</p>
                 </div>
             </div>
-            <a href="checkout"><button class="procedeToCheckout"><i class="fas fa-shield-alt"></i>Place Order</button></a>
+            <button id="placeOrder" class="procedeToCheckout"><i class="fas fa-shield-alt"></i>Place Order</button>
 
         </div>
     </div>
@@ -113,10 +115,24 @@
     if (JSON.parse(sessionStorage.getItem("addresses")) != null)
         addressArray = JSON.parse(sessionStorage.getItem("addresses"));
     displayAddresses();
+    displayTotals();
 
     //get cards
     function updateSessionWithAddresses() {
         sessionStorage.setItem("addresses", JSON.stringify(addressArray));
+    }
+    //display totals
+    function displayTotals() {
+        var totals = [];
+        if (JSON.parse(sessionStorage.getItem("totals")) != null) {
+            totals = JSON.parse(sessionStorage.getItem("totals"));
+
+            $(".subtotal").text("$" + totals.subtotal.toFixed(2));
+            $(".deliveryFee").text("$" + totals.deliveryFee.toFixed(2));
+            $(".total").text("$" + totals.total.toFixed(2));
+        }
+        //else
+        //display zeros           
     }
     //
     //display addresses
@@ -130,10 +146,10 @@
                 addressString +=
                     "<div class='creditCardContainer'>" +
                     "<div class='addressClick' onclick = 'displayCheckCircleOnAddress(" + i + ")'>" +
-                "<i class='far fa-check-circle checkCircleAddress fa-1x' id='checkCircleAddress" + i + "' ></i>" +
+                    "<i class='far fa-check-circle checkCircleAddress fa-1x' id='checkCircleAddress" + i + "' ></i>" +
                     "<div class='creditcartImage'><i class='fas fa-home fa-lg'></i></div>" +
                     "<div class='creditCardNumber'>" +
-                    "<p>"+addressArray[i].addressValue+"</p>" +
+                    "<p>" + addressArray[i].addressValue + "</p>" +
                     "</div>" +
                     "</div>" +
                     "<div class='creditCardDelete'><i class='fas fa-times fa-lg creditcardX' onclick='deleteAddress(" + i + ")'></i></div>" +
@@ -141,8 +157,8 @@
                     "<div class='checkoutDevider'></div>"
             }
         }
-         $(".addressInject").html(addressString);
-         clearAllAddressCheckCircles();
+        $(".addressInject").html(addressString);
+        clearAllAddressCheckCircles();
     }
 
     //
@@ -310,5 +326,16 @@
     //
     //end add dummy item
     //
+
+    $("#placeOrder").click(function() {
+        //sessionStorage.getItem("items")) = null
+        sessionStorage.setItem("items", null);
+        var orderCompleteText =
+            "<div class='orderPacedContainer'>" +
+            "<h1>Thank you</h1>" +
+            "<p>Your order has been placed</p>" +
+            "</div> " 
+        $(".MainContainerContent").html(orderCompleteText)
+    }) 
 </script>
 @endsection

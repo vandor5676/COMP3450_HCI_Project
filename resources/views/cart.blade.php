@@ -201,10 +201,17 @@
         }
         if(subTotal!=0)
         deliveryFee = 2.99;
-        var total = subTotal + deliveryFee;
+        var total = subTotal + deliveryFee;        
         $(".subtotal").text("$" + subTotal.toFixed(2));
         $(".deliveryFee").text("$" + deliveryFee.toFixed(2));
         $(".total").text("$" + total.toFixed(2));
+
+        var totals = {
+            subtotal: subTotal,
+            total: total,
+            deliveryFee: deliveryFee
+        };
+        sessionStorage.setItem("totals", JSON.stringify(totals));
 
     }
 

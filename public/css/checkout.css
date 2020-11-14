@@ -138,6 +138,12 @@ max-width: 7em;
     flex: auto;
 }
 
+/* checkout complete */
+.orderPacedContainer
+{
+    flex: 1;
+    text-align: center;
+}
 
 @media (max-width: 1040px) {
     .mainContainer
