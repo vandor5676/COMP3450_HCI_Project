@@ -1,0 +1,168 @@
+p{
+    margin-bottom: 0rem;
+}
+.mainContainer
+{
+    background-color: #E8E8E8;
+    max-width: 85%;
+    margin: auto;
+    margin-top: 1em;
+    margin-right: 0;
+    border-radius: 0.8em;
+    
+}
+.MainContainerContent
+{
+    margin: 0 1em;
+    padding-bottom: 1em;
+}
+.checkoutDevider
+{
+    background-color: #575757;
+    height: 1px;
+    margin: 0.5em 0em;
+}
+
+.paymentOptionsContainer
+{
+    font-family: 'Segoe UI', 'sans-serif';
+    font-size: 1.5em;
+    padding: 1rem 0;
+}
+.paymentOptions
+{
+margin-bottom: 0rem;
+
+}
+.addButton
+{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 10px ;
+    border-radius: 3px;
+    /* float: right; */
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+}
+/* credit card  */
+.creditCardContainer
+{
+    display: flex;    
+    cursor: pointer;
+    /* flex-wrap: wrap; */
+}
+.creditCardContainer:hover 
+{
+    /* color: rgb(243, 243, 243); */
+   
+}
+.creditcartImage
+{
+flex: 1;
+max-width: 7em;
+}
+.creditcartImage img{
+    max-width: 7em;
+    
+}
+.checkCircle
+{
+    position: relative;
+    /* left: 10px; */
+    color: #ddffc3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -16px;
+    left: 87px;
+    margin-bottom: 7px;
+}
+.checkCircleAddress
+{
+    position: relative;
+    color: #1b3f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -8px;
+    left: 47px;
+    margin-bottom: -6px;
+}
+.creditCardNumber
+{
+    /* flex: 1; */
+    flex-grow: 1;
+    margin-left: 1em;
+}
+.creditCardDelete
+{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creditcardX
+{
+    color: rgb(104, 104, 104);
+}
+.creditcardX:hover
+{
+    color: rgb(43, 43, 43);
+}
+
+/* new card */
+.creditCardInput
+{
+    width: 100%;
+    background-color: #E8E8E8;
+    margin: 3px 0;
+    border: none;
+    outline: none;
+}
+.headerP
+{
+    font-family: 'Segoe UI', 'sans-serif';
+    font-size: 1.5em;
+    padding: 1rem 0;
+}
+
+/* click cintainers */
+.addressClick
+{
+    display: flex;
+    flex: auto;
+}
+
+/* checkout complete */
+.orderPacedContainer
+{
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 1040px) {
+    .mainContainer
+    {
+        max-width: 100%;
+    }
+}
+
+
+/* <div class="imageTextContainer">               
+                <div class="paymentOptionsContainer">
+                    <p>Payment options</p>
+                </div>
+                <div class="creditCardContainer">
+                   <div class="creditcartImage"><img src={{asset("/images/logo.png")}} alt="logo"></div>
+                   <div class="creditCardNumber"><p>XXXX-XXXX-XXXX-1234</p></div>
+                   <div class="creditCardDelete">X</div>
+                </div>              
+                <div class="newCreditCardContainer">
+                    <p>cards</p>
+                </div>              
+            </div> */
