@@ -20,5 +20,6 @@
     @yield('content')
     <!-- should i have a seperate file for cart? -->
     @yield('cart') 
+    @yield('shop')
   </body>
 </html>
