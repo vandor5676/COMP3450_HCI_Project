@@ -4,7 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/shop/shop_banner.jpg);
+    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/shop_banner.jpg);
     height: 7cm;
 }
 .bannerImage{
