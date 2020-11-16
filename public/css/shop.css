@@ -1,0 +1,145 @@
+/* Banner */
+.banner{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/shop/shop_banner.jpg);
+    height: 7cm;
+}
+.bannerImage{
+    width: 100%;
+}
+.bannerTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7cm;
+    font-size: 6em;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.content{
+  display: flex;
+}
+
+/* Category Bar */
+div.category-bar{
+    background-color: rgb(70,70,70);
+    font-family: 'BarlowCondensed','Ebrima', sans-serif;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+div.category-bar-item{
+    margin: auto;
+}
+
+div.category-bar-item > a{
+    color: #FFFFFF;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.category-bar-link{
+    display: inline;
+    text-decoration: none;
+}
+
+.category-bar-link:hover{
+    text-decoration: underline;
+}
+
+/* Filter Sidebar */
+.filterContainer{
+  flex: 1;
+}
+
+.filterSidebar{
+  background-color: #E8E8E8;
+  margin: auto;
+  margin-top: 2em;
+  margin-left: 0;
+  border-radius: 0.8em;
+  padding: 20px 20px;
+}
+
+.sidebar-link{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar-link:hover{
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* Content */
+.productContainer{
+    flex: 9;
+}
+
+.productItem{
+    background-color: #E8E8E8;
+    max-width: 85%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 0.8em;
+    display: flex;
+}
+
+.imageTextContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.image{
+    max-width: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image > img{
+    height: auto;
+    padding: 1em;
+    display: block;
+    width: 100%;
+}
+
+.text{
+    font-family: 'Segoe UI','Oswald', 'sans-serif';
+    vertical-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.text > div > p#title{
+    font-size: 1.5em;
+}
+
+.text > div > p#subtitle{
+    font-size: 1em;
+}
+
+.text > div > p#stock{
+    font-size: 1em;
+    color: #3FA87E;
+}
+
+.addToCart{
+    padding: 2em;
+}
+
+.addToCart-link{
+  text-decoration: none;
+  color: inherit;
+}
