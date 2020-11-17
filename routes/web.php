@@ -41,3 +41,7 @@ Route::get('/checkout', function () {
 Route::get('/vendoraccount', function () {
     return view('vendoraccount');
 });
+
+Route::get('/shop', function () {
+    return view('shop');
+});

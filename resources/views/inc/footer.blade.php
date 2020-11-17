@@ -23,10 +23,10 @@
          <div class="ft-main-item">
            <h2 class="ft-title"><b>Site Links</b></h2>
            <ul>
-             <li><a href="#">Home</a></li>
-             <li><a href="#">Shop</a></li>
+             <li><a href="/">Home</a></li>
+             <li><a href="/shop">Shop</a></li>
              <li><a href="#">Vendors</a></li>
-             <li><a href="#">Account</a></li>
+             <li><a href="/vendoraccount">Account</a></li>
            </ul>
          </div>
          <div class="ft-main-item">

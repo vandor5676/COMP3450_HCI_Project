@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('shop')
-
+@section('content')
 <head>
     <link rel="stylesheet" href="css/shop.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">

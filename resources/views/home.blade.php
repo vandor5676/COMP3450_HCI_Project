@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <header>
-<div class="main-header" ><img {{asset("../public/images/main_header.png")}}></div>
+<div class="main-header" ><img src={{asset("../public/images/main_header.png")}}></div>
 <div class="banner" ><img src="../public/images/banner.png"></div>
 </header>
 

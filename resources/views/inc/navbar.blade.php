@@ -4,26 +4,26 @@
     <!-- first set or items -->
     <div class="navbarItems">
       <div class="navbarItem">
-        <a class="navbarLink" href="shop">SHOP</a>
+        <a class="navbarLink" href="/COMP3450_HCL_Project/public/shop">SHOP</a>
       </div>
       <div class="verticalCenterContainer">
         <div class="devider"></div>
       </div>
       <div class="navbarItem">
-        <a class="navbarLink" href="vendors">VENDORS</a>
+        <a class="navbarLink" href="/COMP3450_HCL_Project/public/vendors">VENDORS</a>
       </div>
     </div>
     <!-- logo -->
     <div class="navbar__logo-container">
       <div class="logo">
-      <a href=""><img class="navbarLogo" src={{asset("/images/logo.png")}} alt="logo"></a>
+      <a href="/"><img class="navbarLogo" src={{asset("/images/logo.png")}} alt="logo"></a>
       </div>
     </div>
     <!-- second set of items -->
     <div class="navbarItems">
 
       <div class="navbarItem">
-        <a class="navbarLink" href="">ACCOUNT</a>
+        <a class="navbarLink" href="/COMP3450_HCL_Project/public/vendoraccount">ACCOUNT</a>
       </div>
 
       <div class="verticalCenterContainer">
