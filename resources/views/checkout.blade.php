@@ -105,9 +105,9 @@
     </div>
     <!-- end total -->
 </div>
-<div>
+<!-- <div>
     <button onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/logo.png',1,2.99)" style="width: 100px; height:100px;"></button>
-</div>
+</div> -->
 
 <script>
     //get addresses from sessionVariable
@@ -298,34 +298,8 @@
             $(this).css("display", "none")
         })
     }
-    //
 
 
-    //
-    //adds a dummy cart item, used for testing
-    //
-
-    //in html 
-    // <button onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/logo.png',1,2.99)"
-    var itemArray = [];
-    if (JSON.parse(sessionStorage.getItem("items")) != null)
-        itemArray = JSON.parse(sessionStorage.getItem("items"));
-
-    function addItem(itemName, farmName, stockText, imageLocation, quantity, price) {
-        var item = {
-            itemName: itemName,
-            farmName: farmName,
-            stockText: stockText,
-            imageLocation: imageLocation,
-            quantity: quantity,
-            price: price
-        };
-        itemArray.push(item);
-        sessionStorage.setItem("items", JSON.stringify(itemArray));
-    }
-    //
-    //end add dummy item
-    //
 
     $("#placeOrder").click(function() {
         //sessionStorage.getItem("items")) = null
