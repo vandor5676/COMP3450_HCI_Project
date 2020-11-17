@@ -5,12 +5,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 
-<!-- Shop Banner -->
-<div class="banner">
-    <div class="bannerTitle">
-        <p>Shop</p>
-    </div>
-</div>
+<header>
+<div class="main-header" style="position: relative;"><img src={{asset("../public/images/shop_banner.jpg")}}>
+  <div id="shop_header_text" style="position: absolute;">
+    <p><b>SHOP</b></p>
+   </div>
+ </div>
+</header>
 
 <!-- Category Nav Bar -->
 <div class="category-bar">
@@ -96,11 +97,5 @@
 
 </div>
 
-
-</body>
-
-
-
-</html>
 
 @endsection

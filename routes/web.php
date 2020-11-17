@@ -45,3 +45,7 @@ Route::get('/vendoraccount', function () {
 Route::get('/shop', function () {
     return view('shop');
 });
+
+Route::get('/vendors', function () {
+    return view('vendors');
+});

@@ -12,6 +12,13 @@
     /* display: flex;
     justify-content: center; */
   }
+
+#account_header_text{
+  font-size: 10em;
+  margin-top: 3%;
+  color: #FFFFFF;
+}
+
 .profile {
   margin-left: 10%;
   margin-right: 10%;
