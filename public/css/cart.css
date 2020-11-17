@@ -14,6 +14,8 @@
 .cartContainer
 {
     display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .content#itemsContainer
 {
@@ -44,7 +46,7 @@
     max-width: 85%;
     margin: auto;
     margin-top: 1em;
-    margin-right: 0;
+    margin-right: 5%;
     border-radius: 0.8em;
 
     display: flex;

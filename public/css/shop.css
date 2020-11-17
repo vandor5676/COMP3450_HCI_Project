@@ -123,6 +123,7 @@ div.category-bar-item > a{
 .addToCart{
     padding: 2em;
 }
+
 /* used to remove formating on buttons */
 .removeButton
 {
@@ -131,7 +132,6 @@ div.category-bar-item > a{
     border: none;
     background-color: #E8E8E8;
 }
-
 .addToCart-link{
   text-decoration: none;
   color: inherit;
