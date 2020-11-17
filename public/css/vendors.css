@@ -1,12 +1,15 @@
-
-.content{
-  display: flex;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Barlow Condensed', sans-serif;
 }
-
-#shop_header_text{
+#vendor_header_text{
     font-size: 10em;
     margin-top: 3%;
     color: #FFFFFF;
+}
+.content{
+  display: flex;
 }
 
 /* Category Bar */
@@ -21,6 +24,7 @@ div.category-bar{
     z-index: 1000;
     transition: all 0.3s ease-in-out;
 }
+
 div.category-bar-item{
     margin: auto;
 }
@@ -66,73 +70,70 @@ div.category-bar-item > a{
 }
 
 /* Content */
-.productContainer{
-    flex: 9;
-}
 
 .productItem{
-    background-color: #E8E8E8;
-    max-width: 85%;
-    margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    background-color: #f7b538;
+    margin-top: 3%;
     border-radius: 0.8em;
-    display: flex;
-}
-
-.imageTextContainer{
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-}
-
-.image{
-    max-width: 10em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image > img{
-    height: auto;
-    padding: 1em;
-    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
     width: 100%;
+    margin-bottom: 5%;
+    padding-bottom: 2%;
 }
 
-.text{
-    font-family: 'Segoe UI','Oswald', 'sans-serif';
-    vertical-align: left;
-    display: flex;
-    align-items: center;
+.logo_container{
+  display: flex;
 }
 
-.text > div > p#title{
-    font-size: 1.5em;
+.product_img_preview {
+  max-width: 20%;
+  border: solid;
+  border-width: 2px;
+  border-color: #e7a62b;
+  margin: 1%;
 }
 
-.text > div > p#subtitle{
-    font-size: 1em;
+.vendor_logo{
+  max-width: 25%;
+  margin: 3% 0% 3% 5%;
 }
 
-.text > div > p#stock{
-    font-size: 1em;
-    color: #3FA87E;
+.vendor_text{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color:#464646;
+}
+
+.center{
+  text-align: center;
+  margin-bottom: 3%;
+}
+.store_preview{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .addToCart{
     padding: 2em;
 }
-/* used to remove formating on buttons */
-.removeButton
-{
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    background-color: #E8E8E8;
-}
 
 .addToCart-link{
   text-decoration: none;
   color: inherit;
+}
+
+#visit_store{
+  padding: 2% 8% 2% 8%;
+  background-color:  #464646;
+  border: none;
+  font-size: 25px;
+}
+
+#visit_store:hover{
+    background-color:   #db7c26;
 }

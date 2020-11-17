@@ -4,21 +4,21 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   
+
     height: 7cm;
 }
 .banner#checkout
 {
-    background-image: linear-gradient(rgba(21, 193, 58, 0.31),rgb(21, 193, 58, 0.31)), url(../images/cart/bannerapplesSmall.jpg);
+    background-image: linear-gradient(rgba(21, 193, 58, 0.31),rgb(21, 193, 58, 0.31)), url(../images/cart/bannerapples.jpg);
 }
 .banner#cart
 {
-    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/cart/bannerapplesSmall.jpg);
+    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/cart/bannerapples.jpg);
 }
 .bannerImage
 {
     width: 100%;
-    
+
 }
 .bannerTitle
 {

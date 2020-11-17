@@ -5,13 +5,19 @@
     height: 1000px;
 }
 
+#cart_header_text{
+    font-size: 10em;
+    margin-top: 3%;
+    color: #FFFFFF;
+}
+
 .cartContainer
 {
     display: flex;
 }
 .content#itemsContainer
 {
-   
+
     height: auto;
     /* background-color: violet; */
     /* max-width: 90em;
@@ -25,9 +31,9 @@
 
 .noItemsContainer p
 {
-    text-align:center; 
+    text-align:center;
     vertical-align: middle;
-    display: table-cell;   
+    display: table-cell;
     line-height: 100px;
 }
 /* items in cart */
@@ -187,7 +193,7 @@ cursor: pointer;
     }
     .text
     {
-       
+
         margin-right: 1.5em;
     }
     .image
@@ -218,7 +224,7 @@ cursor: pointer;
 @media (max-width: 564px) {
     .text
     {
-       
+
         margin-left: 1.5em;
     }
 }
@@ -226,7 +232,7 @@ cursor: pointer;
 /* cart totals */
 .totalcontainer
 {
-    font-family: 'Segoe UI','Oswald', 'sans-serif';       
+    font-family: 'Segoe UI','Oswald', 'sans-serif';
     font-size: 1.5em;
     height: auto;
     /* background-color: rgb(95, 32, 95); */
