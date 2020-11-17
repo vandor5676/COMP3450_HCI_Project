@@ -29,11 +29,15 @@ Route::get('/youthemployment', function () {
     return view('youthemployment');
 });
 
-//rout for cart page
+//route for cart page
 Route::get('/cart', function () {
     return view('cart');
 });
-//rout for checkout page
+//route for checkout page
 Route::get('/checkout', function () {
     return view('checkout');
+});
+
+Route::get('/vendoraccount', function () {
+    return view('vendoraccount');
 });
