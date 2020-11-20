@@ -1,18 +1,25 @@
 @extends('layouts.app')
-@section('cart')
+@section('content')
 
 <head>
     <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/banners.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 </head>
 
-<div class="banner" id="cart">
+<header>
+<div class="main-header" style="position: relative;"><img src={{asset("../public/images/bannerapples.jpg")}}>
+  <div id="cart_header_text" style="position: absolute;">
+    <p><b>CART</b></p>
+   </div>
+ </div>
+</header>
+
+<!-- <div class="banner" id="cart">
     <div class="bannerTitle">
         <p>Cart</p>
     </div>
-</div>
+</div> -->
 <div class="cartContainer" id="cart">
     <!-- cart item -->
     <div class="content" id="itemsContainer">
@@ -201,7 +208,7 @@
         }
         if(subTotal!=0)
         deliveryFee = 2.99;
-        var total = subTotal + deliveryFee;        
+        var total = subTotal + deliveryFee;
         $(".subtotal").text("$" + subTotal.toFixed(2));
         $(".deliveryFee").text("$" + deliveryFee.toFixed(2));
         $(".total").text("$" + total.toFixed(2));
@@ -286,9 +293,5 @@
     // end displaing data
     //
 </script>
-</body>
 
-
-
-</html>
 @endsection

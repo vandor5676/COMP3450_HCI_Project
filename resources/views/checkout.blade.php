@@ -3,17 +3,24 @@
 
 <head>
     <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="css/banners.css">
+    <!-- <link rel="stylesheet" href="css/banners.css"> -->
     <link rel="stylesheet" href="css/checkout.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 </head>
+<header>
+<div class="main-header" style="position: relative;"><img src={{asset("../public/images/bannerapples.jpg")}}>
+  <div id="cart_header_text" style="position: absolute;">
+    <p><b>CHECKOUT</b></p>
+   </div>
+ </div>
+</header>
 
-<div class="banner" id="checkout">
+<!-- <div class="banner" id="checkout">
     <div class="bannerTitle">
         <p>Checkout</p>
     </div>
-</div>
+</div> -->
 <div class="cartContainer" id="cart">
 
     <div class="content" id="itemsContainer">
@@ -132,7 +139,7 @@
             $(".total").text("$" + totals.total.toFixed(2));
         }
         //else
-        //display zeros           
+        //display zeros
     }
     //
     //display addresses
@@ -308,8 +315,8 @@
             "<div class='orderPacedContainer'>" +
             "<h1>Thank you</h1>" +
             "<p>Your order has been placed</p>" +
-            "</div> " 
+            "</div> "
         $(".MainContainerContent").html(orderCompleteText)
-    }) 
+    })
 </script>
 @endsection

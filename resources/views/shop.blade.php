@@ -1,18 +1,18 @@
 @extends('layouts.app')
-@section('shop')
-
+@section('content')
 <head>
     <link rel="stylesheet" href="css/shop.css">
-    <link rel="stylesheet" href="css/checkmark.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 
-<!-- Shop Banner -->
-<div class="banner">
-    <div class="bannerTitle">
-        <p>Shop</p>
-    </div>
-</div>
+<header>
+<div class="main-header" style="position: relative;"><img src={{asset("../public/images/shop_banner.jpg")}}>
+  <div id="shop_header_text" style="position: absolute;">
+    <p><b>SHOP</b></p>
+   </div>
+ </div>
+</header>
+
 
 <!-- Category Nav Bar -->
 <div class="category-bar">
@@ -130,17 +130,12 @@
         itemArray.push(item);
         sessionStorage.setItem("items", JSON.stringify(itemArray));
 
-        $("#checkMark"+cardNumber).css("display","initial"); 
+        $("#checkMark"+cardNumber).css("display","initial");
         $("#cartItem"+cardNumber).blur();
     }
     //
     //end add item
     //
 </script>
-</body>
-
-
-
-</html>
 
 @endsection

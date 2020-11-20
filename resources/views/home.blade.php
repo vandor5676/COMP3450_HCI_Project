@@ -1,107 +1,43 @@
 @extends('layouts.app')
 @section('content')
-
 <header>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLRForm">
-    LOGIN
-  </button>
-  <!-- Modal -->
-  <!--Modal: Login / Register Form-->
-  <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog cascading-modal" role="document">
-      <!--Content-->
-      <div class="modal-content">
-
-        <!--Modal cascading tabs-->
-        <div class="modal-c-tabs">
-
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#panel8" role="tab">Register</a>
-            </li>
-          </ul>
-
-          <!-- Tab panels -->
-          <div class="tab-content">
-            <!--Panel 7-->
-            <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
-              <!--Body-->
-              <div class="modal-body mb-1">
-                <div class="md-form form-sm mb-4">
-                  <label data-error="wrong" data-success="right" for="modalLRInput10">Email</label>
-                  <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
-                </div>
-
-                <div class="md-form form-sm mb-4">
-                  <label data-error="wrong" data-success="right" for="modalLRInput11">Password</label>
-                  <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
-                </div>
-                <div class="text-center mt-2">
-                  <button class="btn btn-info">SUBMIT</button>
-                </div>
-              </div>
-              <!--Footer-->
-              <div class="modal-footer">
-                <div class="options text-center text-md-right mt-1">
-                  <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-                  <p><a href="#" class="blue-text">Forget your password?</a></p>
-                </div>
-                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
-              </div>
-
-            </div>
-            <!--/.Panel 7-->
-
-            <!--Panel 8-->
-            <div class="tab-pane fade" id="panel8" role="tabpanel">
-
-              <!--Body-->
-              <div class="modal-body">
-                <div class="md-form form-sm mb-5">
-                  <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
-                  <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
-                </div>
-
-                <div class="md-form form-sm mb-5">
-                  <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-                  <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
-                </div>
-
-                <div class="md-form form-sm mb-4">
-                  <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-                  <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
-                </div>
-
-                <div class="text-center form-sm mt-2">
-                  <button class="btn btn-info">Sign up</button>
-                </div>
-
-              </div>
-              <!--Footer-->
-              <div class="modal-footer">
-                <div class="options text-right">
-                  <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
-                </div>
-                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-            <!--/.Panel 8-->
-          </div>
-
-        </div>
-      </div>
-      <!--/.Content-->
-    </div>
-  </div>
-  <div class="main-header" ></div>
+<div class="main-header" ><img src={{asset("../public/images/main_header.png")}}></div>
+<div class="banner" ><img src="../public/images/banner.png"></div>
 </header>
 
 <main class="container">
+
+
+
+  <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="defaultForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="defaultForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -228,67 +164,7 @@
 
 </main>
 
-<div class="ft-container">
-<footer>
-     <!-- Footer main -->
-     <section class="ft-main">
-       <div class="ft-main-item">
-         <h2 class="ft-title">Site Links</h2>
-         <ul>
-           <li><a href="#">Home</a></li>
-           <li><a href="#">About Us</a></li>
-           <li><a href="#">Services</a></li>
-           <li><a href="#">Youth Employment Program</a></li>
-           <li><a href="#">Contact</a></li>
-         </ul>
-       </div>
-       <div class="ft-main-item">
-         <h2 class="ft-title">Resources</h2>
-         <ul>
-           <li><a href="#">Docs</a></li>
-           <li><a href="#">Blog</a></li>
-           <li><a href="#">eBooks</a></li>
-           <li><a href="#">Webinars</a></li>
-         </ul>
-       </div>
-       <div class="ft-main-item">
-         <h2 class="ft-title">Contact Us</h2>
-          <p>250.318.0597</p>
-          <p>778.846.6251</p>
-          <p>info@insightfultraining.ca</p>
-       </div>
 
-       <div class="ft-main-item">
-         <h2 class="ft-title">Stay Updated</h2>
-         <p>Subscribe to our newsletter to get our latest news.</p>
-         <form>
-           <input type="email" name="email" placeholder="Enter email address">
-           <input type="submit" value="Subscribe">
-         </form>
-       </div>
-     </section>
-
-     <!-- Footer social -->
-     <section class="ft-social">
-       <ul class="ft-social-list">
-         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-         <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-       </ul>
-     </section>
-
-     <!-- Footer legal -->
-     <section class="ft-legal">
-       <ul class="ft-legal-list">
-         <li><a href="#">Terms &amp; Conditions</a></li>
-         <li><a href="#">Privacy Policy</a></li>
-         <li>&copy; 2020 Darko Web Studios </li>
-       </ul>
-     </section>
-   </footer>
-</div>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>

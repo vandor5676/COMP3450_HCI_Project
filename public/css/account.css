@@ -1,0 +1,266 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+  /* For desktop: */
+
+  .flex-grid {
+    /* display: flex;
+    justify-content: center; */
+  }
+
+#account_header_text{
+  font-size: 10em;
+  margin-top: 3%;
+  color: #FFFFFF;
+}
+
+.profile {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.profile_img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.avatar {
+    max-width: 60%;
+    height: auto;
+    border: solid;
+    border-width: 2px;
+    border-color: #ece5e5;
+    border-radius: 10px;
+    padding:2%;
+}
+
+.profile-btn-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#upload_img{
+  width: 100%;
+  margin:10px;
+  background-color: #9e2a2b;
+  padding: 5% 10% 5% 10%;
+  border: none;
+  font-size: 20px;
+}
+
+#upload_img:hover{
+  background-color: #464646;
+}
+
+#update_profile{
+  width: 100%;
+  margin:10px;
+  background-color:  #db7c26;
+  padding: 5% 10% 5% 10%;
+  border: none;
+  font-size: 20px;
+}
+
+#update_profile:hover{
+  background-color:  #464646;
+}
+
+#vendor_shop_name{
+  font-weight: 700;
+  color: #464646;
+  font-size: 40px;
+}
+
+#vendor_date{
+  font-weight: 400;
+  color: #426a5a;
+  font-size: 20px;
+}
+
+#vendor_address{
+  font-weight: 400;
+  color: #464646;
+  font-size: 25px;
+  margin: 3% 0% 3% 3%
+}
+
+#vendor_contact{
+  font-weight: 400;
+  color: #464646;
+  font-size: 25px;
+  margin: 3% 0% 3% 3%
+}
+
+.products{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+#current_banner{
+  margin-bottom: 1%;
+  width: 100%;
+}
+
+.current_products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product_img {
+  max-width: 20%;
+  margin: 2%;
+  border: solid;
+  border-width: 2px;
+  border-color: #ece5e5;
+}
+.center {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3%;
+}
+
+#add_product{
+  padding: 2% 8% 2% 8%;
+  background-color:  #426a5a;
+  border: none;
+  font-size: 25px;
+  margin:10px;
+}
+
+#add_product:hover{
+  background-color:  #464646;
+}
+
+#view_store{
+  padding: 2% 8% 2% 8%;
+  background-color:  #f7b538;
+  border: none;
+  margin:10px;
+  font-size: 25px;
+}
+
+#view_store:hover{
+  background-color:  #464646;
+}
+
+.orders{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+#orders_banner{
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+.accordion-wrap{
+    margin-bottom: 1%;
+}
+
+.accordion {
+  font-weight: 400;
+  background-color: #464646;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  border:none;
+}
+
+.active, .accordion:hover {
+  background-color:  #f7b538;
+  border:none;
+}
+
+.plus{
+  float: right;
+}
+
+.panel {
+  font-size: 25px;
+  color: #464646;
+  padding: 4%;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+#update_order{
+  text-align: center;
+  padding: 1% 4% 1% 4%;
+  background-color: #9e2a2b;
+  border: none;
+  font-size: 25px;
+  margin-top: 2%
+}
+
+#viewall_orders_btn{
+  padding: 2% 8% 2% 8%;
+  background-color:  #f7b538;
+  border: none;
+  margin-top: 2%;
+  margin-bottom: 7%;
+  font-size: 25px;
+}
+
+#viewall_orders_btn:hover{
+    background-color:  #464646;
+}
+
+@media only screen and (min-width: 29.8125rem /*477px*/) {
+    .ft-main {
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width: 77.5rem /*1240px*/ ) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+}
+
+/* .footer {
+  width: 100%;
+  height: 300px;
+  background-color: #404040;
+}
+.flex-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid .col {
+  flex: 1;
+}
+
+@media (max-width: 400px) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+} */
+
+
+/* Slide */
