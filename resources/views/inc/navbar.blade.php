@@ -1,8 +1,8 @@
 
 <body>
   <div class="bar">
-    <!-- first set or items -->
-    <div class="navbarItems">
+    
+    <!-- <div class="navbarItems">
       <div class="navbarItem">
         <a class="navbarLink" href="/COMP3450_HCL_Project/public/shop">SHOP</a>
       </div>
@@ -13,13 +13,13 @@
         <a class="navbarLink" href="/COMP3450_HCL_Project/public/vendors">VENDORS</a>
       </div>
     </div>
-    <!-- logo -->
+   
     <div class="navbar__logo-container">
       <div class="logo">
       <a href="/"><img class="navbarLogo" src={{asset("/images/logo.png")}} alt="logo"></a>
       </div>
     </div>
-    <!-- second set of items -->
+   
     <div class="navbarItems">
 
       <div class="navbarItem">
@@ -36,7 +36,7 @@
         </a>
       </div>
 
-    </div>
+    </div> -->
   </div>
 </body>
 <!-- </body> -->

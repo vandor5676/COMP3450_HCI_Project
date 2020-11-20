@@ -23,7 +23,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    @include('inc.navbar')
+  @include('inc.navbar')
     @yield('content')
     <!-- should i have a seperate file for cart? -->
     @yield('cart')
