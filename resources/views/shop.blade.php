@@ -65,12 +65,17 @@
             </div>
 
             <div class="addToCart">
-                <button id="cartItem1" onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/logo.png',1,2.99,1)" class="addToCart-link removeButton">Add to Cart</button>
+              <div class="quantityWraper">
+                <div> <button class="QuantityButton" id="subtract">-</button> </div>
+                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <button class="QuantityButton" id="add">+</button></div>
+              </div>
+                <button class="cartitembutton" id="cartItem1" onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/logo.png',1,2.99,1)" class="addToCart-link removeButton">Add to Cart</button>
             </div>
 
             <div style="position: relative; width: auto; font-family: 'Segoe UI','Oswald', 'sans-serif';">
                 <div style="padding: 2em">
-                    <p>$2.99</p>
+                    <p class="price">$2.99</p>
                 </div>
             </div>
         </div>
@@ -97,12 +102,17 @@
             </div>
 
             <div class="addToCart">
-                <button id="cartItem2" onclick="addItem('Lettuce', 'Tranquil Farm', 'In Stock', '/images/logo.png',2,1.99,2)" class="addToCart-link removeButton">Add to Cart</button>
+              <div class="quantityWraper">
+                <div> <button class="QuantityButton" id="subtract">-</button> </div>
+                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <button class="QuantityButton" id="add">+</button></div>
+              </div>
+                <button class="cartitembutton" id="cartItem2" onclick="addItem('Lettuce', 'Tranquil Farm', 'In Stock', '/images/logo.png', 2, 1.99, 2)" class="addToCart-link removeButton">Add to Cart</button>
             </div>
 
             <div style="position: relative; width: auto; font-family: 'Segoe UI','Oswald', 'sans-serif';">
                 <div style="padding: 2em">
-                    <p>$1.99</p>
+                    <p class="price">$1.99</p>
                 </div>
             </div>
         </div>
@@ -136,6 +146,7 @@
     //
     //end add item
     //
+
 </script>
 
 @endsection
