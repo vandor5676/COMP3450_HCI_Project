@@ -124,6 +124,56 @@ div.category-bar-item > a{
     padding: 2em;
 }
 
+.cartitembutton{
+  margin: 5px 0;
+  padding: 0 25px;
+  height: 60px;
+  width: auto;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quantityWraper
+{
+    display: flex;
+}
+.quantityWraper >div
+{
+    flex: 1;
+    margin-top: 1em;
+}
+
+.QuantityInput
+{
+    max-width: 50px;
+    height: 30px;
+    border: none;
+    text-align: center;
+}
+.QuantityButton
+{
+    height: 30px;
+    width: 30px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.price{
+  font-size: 20px;
+}
+
 /* used to remove formating on buttons */
 .removeButton
 {
