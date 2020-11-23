@@ -152,6 +152,14 @@ div.category-bar-item > a{
     background-color:   #db7c26;
 }
 
+.carouselFlexContainer
+{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+}
+
 @media (max-width: 1024px) {
   .productItem
   {

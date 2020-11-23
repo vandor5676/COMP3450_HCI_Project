@@ -28,6 +28,7 @@
     </div>
   </div>
   <div class="productContainer">
+   
     <!-- Product -->
     <div class="productItem">
       <div class="logo_container">
@@ -40,16 +41,41 @@
         </div>
       </div>
       <div class="store_preview">
-        <img class="product_img_preview" src="images/honey_jar.png" alt="">
-        <img class="product_img_preview" src="images/honey-treats.png" alt="">
-        <img class="product_img_preview" src="images/candle.jpg" alt="">
-        <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carouselFlexContainer">
+                <img class="product_img_preview" src="images/honey_jar.png" alt="">
+                <img class="product_img_preview" src="images/honey-treats.png" alt="">
+                <img class="product_img_preview" src="images/candle.jpg" alt="">
+                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+              </div>
+            </div>
+            <div class="carousel-item">
+            <div class="carouselFlexContainer">
+                <img class="product_img_preview" src="images/honey_jar.png" alt="">
+                <img class="product_img_preview" src="images/honey-treats.png" alt="">
+                <img class="product_img_preview" src="images/candle.jpg" alt="">
+                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+              </div>
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
     <!-- Product end -->
 
-    <!-- Product -->
-    <div class="productItem">
+     <!-- Product -->
+     <div class="productItem">
       <div class="logo_container">
         <div class="vendorLogoWraper"> <img class="vendor_logo" src={{asset("/images/bee.png")}} alt="Product Image"></div>
         <div class="vendor_text">
@@ -60,10 +86,35 @@
         </div>
       </div>
       <div class="store_preview">
-        <img class="product_img_preview" src="images/honey_jar.png" alt="">
-        <img class="product_img_preview" src="images/honey-treats.png" alt="">
-        <img class="product_img_preview" src="images/candle.jpg" alt="">
-        <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carouselFlexContainer">
+                <img class="product_img_preview" src="images/honey_jar.png" alt="">
+                <img class="product_img_preview" src="images/honey-treats.png" alt="">
+                <img class="product_img_preview" src="images/candle.jpg" alt="">
+                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+              </div>
+            </div>
+            <div class="carousel-item">
+            <div class="carouselFlexContainer">
+                <img class="product_img_preview" src="images/honey_jar.png" alt="">
+                <img class="product_img_preview" src="images/honey-treats.png" alt="">
+                <img class="product_img_preview" src="images/candle.jpg" alt="">
+                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+              </div>
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
     </div>
     <!-- Product end -->
