@@ -37,7 +37,7 @@
           <p style="font-size: 35px;"><b> Natural Bee Farm </b></p>
           <p style="font-size: 20px;">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <a id="visit_store" href="#" class="btn btn-primary">VISIT STORE</a>
+          <a id="visit_store" href="/NaturalBeeFarm" class="btn btn-primary">VISIT STORE</a>
         </div>
       </div>
       <div class="store_preview">
@@ -45,7 +45,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="carouselFlexContainer">
-                <img class="product_img_preview" src="images/honey_jar.png" alt="">
+                <img class="product_img_preview" src="images/honey_jar.png" alt="" >
                 <img class="product_img_preview" src="images/honey-treats.png" alt="">
                 <img class="product_img_preview" src="images/candle.jpg" alt="">
                 <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
