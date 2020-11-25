@@ -1,0 +1,113 @@
+
+/* section banner */
+.sectionBannerText#location
+{
+
+}
+.sectionBannerText
+{
+    position: absolute;
+    margin-left: -70px;
+    left: 105px;
+    font-size: 38px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+.sectionBanner
+{
+    display: flex;
+}
+.sectionBanner#greyBar
+{
+    background-color: #464646;
+    height: 56px;
+    flex: 20;
+}
+.sectionBanner#yellowBar
+{
+    flex: 1;
+    height: 56px;
+    background-color: #F7B53A;
+}
+.sectionBanner#orangeBar
+{
+    flex: 1;
+    height: 56px;
+    background-color: #DA7C25;
+}
+.sectionBanner#redBar
+{
+    flex: 1;
+    height: 56px;
+    background-color: #9E2A2B;
+}
+.sectionBanner#greenBar
+{
+    flex: 1;
+    height: 56px;
+    background-color: #43695A;
+}
+/* end section banner */
+
+/* big section banner */
+
+.bigSectionBannerText
+{
+    position: absolute;
+    margin-left: 25px;
+    font-size: 58px;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+.bigSectionBanner
+{
+    display: flex;
+    height: 90px;
+    
+}
+.bannerColors
+{
+    width: 2em;
+}
+.bigSectionBanner#greyBar
+{
+    background-color: #464646;    
+    flex: 20;
+}
+.bigSectionBanner#yellowBar
+{
+
+    background-color: #F7B53A;
+}
+.bigSectionBanner#orangeBar
+{
+
+    background-color: #DA7C25;
+}
+.bigSectionBanner#redBar
+{
+
+    background-color: #9E2A2B;
+}
+.bigSectionBanner#greenBar
+{
+
+    background-color: #43695A;
+}
+/* end big section banner */
+
+
+@media only screen and (max-width: 1192px) {
+    .col
+    {
+        flex-basis: initial;
+    }
+    .bannerColors
+    {
+        width: 1em;
+    }
+    .product_img {
+        max-width: 46%;
+    }
+
+  }

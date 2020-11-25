@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 7cm;
+    height: 14cm;
 }
 .banner#checkout
 {
@@ -14,6 +14,10 @@
 .banner#cart
 {
     background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/cart/bannerapples.jpg);
+}
+.banner#beeFarm
+{
+    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/bees_banner.jpg);
 }
 .bannerImage
 {
@@ -27,6 +31,6 @@
       align-items: center;
       height: 7cm;
       font-size: 6em;
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Barlow Condensed', sans-serif;
       color: white;
 }
