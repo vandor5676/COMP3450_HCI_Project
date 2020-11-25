@@ -77,40 +77,40 @@
      <!-- Product -->
      <div class="productItem">
       <div class="logo_container">
-        <div class="vendorLogoWraper"> <img class="vendor_logo" src={{asset("/images/bee.png")}} alt="Product Image"></div>
+        <div class="vendorLogoWraper"> <img class="vendor_logo" id="berryLogo" src={{asset("/images/berryWhite.png")}} alt="Product Image"></div>
         <div class="vendor_text">
-          <p style="font-size: 35px;"><b> Natural Bee Farm </b></p>
+          <p style="font-size: 35px;"><b> Berry Farm </b></p>
           <p style="font-size: 20px;">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
           <a id="visit_store" href="#" class="btn btn-primary">VISIT STORE</a>
         </div>
       </div>
       <div class="store_preview">
-        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+        <div id="carouselBerryControls" class="carousel slide" data-interval="false" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="carouselFlexContainer">
-                <img class="product_img_preview" src="images/honey_jar.png" alt="">
-                <img class="product_img_preview" src="images/honey-treats.png" alt="">
-                <img class="product_img_preview" src="images/candle.jpg" alt="">
-                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+                <img class="product_img_preview" src="images/vendorProduce/Blackberries.jpg" alt="">
+                <img class="product_img_preview" src="images/vendorProduce/cherrys.jpg" alt="">
+                <img class="product_img_preview" src="images/vendorProduce/grapes.jpg" alt="">
+                <img class="product_img_preview" src="images/vendorProduce/strawberrys.jpg" alt="">
               </div>
             </div>
             <div class="carousel-item">
             <div class="carouselFlexContainer">
-                <img class="product_img_preview" src="images/honey_jar.png" alt="">
-                <img class="product_img_preview" src="images/honey-treats.png" alt="">
-                <img class="product_img_preview" src="images/candle.jpg" alt="">
-                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
+            <img class="product_img_preview" src="images/vendorProduce/Blackberries.jpg" alt="">
+                <img class="product_img_preview" src="images/vendorProduce/cherrys.jpg" alt="">
+                <img class="product_img_preview" src="images/vendorProduce/grapes.jpg" alt="">
+                <img class="product_img_preview" src="images/vendorProduce/strawberrys.jpg" alt="">
               </div>
             </div>
 
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselBerryControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselBerryControls" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
