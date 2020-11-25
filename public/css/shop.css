@@ -3,12 +3,6 @@
   display: flex;
 }
 
-#shop_header_text{
-    font-size: 10em;
-    margin-top: 3%;
-    color: #FFFFFF;
-}
-
 /* Category Bar */
 div.category-bar{
     background-color: rgb(70,70,70);

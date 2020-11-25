@@ -6,23 +6,11 @@
 
 <header>
 <div class="main-header" style="position: relative;"><img src={{asset("../public/images/vendor_banner.jpg")}}>
-  <div id="vendor_header_text" style="position: absolute;">
+  <div id="header_text" style="position: absolute;">
     <p><b>VENDORS</b></p>
    </div>
  </div>
 </header>
-
-<!-- Category Nav Bar -->
-<div class="category-bar">
-  <div class="category-bar-item">
-    <a class="category-bar-link" href="">All Products</a>
-    <a class="category-bar-link" href="">Produce</a>
-    <a class="category-bar-link" href="">Meat</a>
-    <a class="category-bar-link" href="">Dairy</a>
-    <a class="category-bar-link" href="">Honey</a>
-    <a class="category-bar-link" href="">Bakery</a>
-  </div>
-</div>
 
 <!-- Filters Bar -->
 <div class="content">
@@ -50,23 +38,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. 
 <a id="visit_store" href="#" class="btn btn-primary">VISIT STORE</a>
                   </div>
                   </div>
+
                 <div class="store_preview">
-                            <img class="product_img_preview" src="../public/images/honey_jar.png" alt="">
-                            <img class="product_img_preview" src="../public/images/honey-treats.png" alt="">
-                            <img class="product_img_preview" src="../public/images/candle.jpg" alt="">
-                            <img class="product_img_preview" src="../public/images/honey_comb.jpg" alt="">
+                        <div class="preview_img_container"><img class="product_img_preview" src="../public/images/honey_jar.png" alt=""><span class="preview_img_text">Premium Honey</span></div>
+                        <div class="preview_img_container"><img class="product_img_preview" src="../public/images/honey-treats.png" alt=""><span class="preview_img_text">Flavored Honey Sticks</span></div>
+                        <div class="preview_img_container"><img class="product_img_preview" src="../public/images/candle.jpg" alt=""><span class="preview_img_text">Beeswax Candles</span></div>
+                        <div class="preview_img_container"><img class="product_img_preview" src="../public/images/honey_comb.jpg" alt=""><span class="preview_img_text">Honey Comb</span></div>
                       </div>
-                      <!-- <div class ="center">
-                        <a id="visit_store" href="#" class="btn btn-primary">VISIT STORE</a>
-                      </div> -->
+
+
+
                 </div>
 
 </div>
-
-</body>
-
-
-
-</html>
 
 @endsection

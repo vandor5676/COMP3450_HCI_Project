@@ -12,7 +12,6 @@
 }
 
 .navbarLink {
-
     display: block;
     color: white;
     text-align: center;
@@ -24,7 +23,6 @@
     vertical-align: middle;
     max-height: 3em;
     max-width: 3em;
-
   }
   div.bar {
    background-color:#464646;
@@ -78,6 +76,41 @@
     height: auto;
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: #464646;
+    font-size: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
 
   @media only screen and (max-width: 658px) {
     div.navbarItem

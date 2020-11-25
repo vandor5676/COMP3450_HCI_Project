@@ -1,8 +1,13 @@
 @extends('layouts.app')
 @section('content')
+
+<head>
+    <link rel="stylesheet" href="css/account.css">
+</head>
+
 <header>
 <div class="main-header" style="position: relative;"><img src={{asset("../public/images/vendor_header.jpg")}}>
-  <div id="account_header_text" style="position: absolute;">
+  <div id="header_text" style="position: absolute;">
     <p><b>WELCOME BACK</b></p>
    </div>
  </div>
@@ -14,44 +19,82 @@
     <div class="col profile_img">
       <img alt="Avatar" class="avatar" src="../public/images/bee_dark.png">
       <span class="profile-btn-container">
-        <a id="upload_img" href="#" class="btn btn-primary">UPLOAD IMAGE</a>
-      <a id="update_profile" href="#" class="btn btn-primary">UPDATE PROFILE</a>
+        <input type="file" id="upload" hidden/>
+        <label id="upload_label" for="upload" class="btn btn-primary">UPLOAD IMAGE</label>
+      <a id="update_profile" class="btn btn-primary">UPDATE PROFILE</a>
     </span>
     </div>
-    <div class="col">
-      <div id="vendor_shop_name">Natural Bee Farm</div>
-      <div id="vendor_date"><p><i class="fas fa-user-circle" style="color:#426a5a;"></i> &nbsp;Vendor since 10/19/2020</p></div>
-      <div><img src="../public/images/location_banner.png"></div>
-      <div id="vendor_address">
-        <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;1234 Okanagan Way, Kamloops BC V2B1F8</p>
-      </div>
-      <div><img src="../public/images/contact_banner.png"></div>
-      <div id="vendor_contact">
-        <p><i class="fas fa-phone"></i> &nbsp;&nbsp;250-852-1567</p>
-        <p><i class="fas fa-envelope"></i> &nbsp;&nbsp;info@naturalbeefarms.ca</p>
+    <div id="profile_info" class="col">
+      <div id="profile_info_edit">
+        <h2>UPDATE YOUR INFO</h2>
+        <input id="vendor_name" type="text" placeholder="name">
+        <input id="vendor_address" type="text" placeholder="address">
+        <input id="vendor_phone" type="tel" placeholder="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+        <input id="vendor_email" type="email" placeholder="email">
+        <br>
+        <button id="save_profile"  class="btn btn-primary" type="button">SAVE</button>
       </div>
 
+      <div id="profile_info_view">
+        <div id="vendor_shop_name">Natural Bee Farm</div>
+        <div id="vendor_date"><p><i class="fas fa-user-circle" style="color:#426a5a;"></i> &nbsp;Vendor since 10/19/2020</p></div>
+        <div><img src="../public/images/location_banner.png"></div>
+        <div id="vendor_shop_address">
+          <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;<span id="address_val">1234 Okanagan Way, Kamloops BC V2B1F8</span></p>
+        </div>
+        <div><img src="../public/images/contact_banner.png"></div>
+        <div id="vendor_shop_email">
+          <p><i class="fas fa-phone"></i> &nbsp;&nbsp;<span id="phone_val">250-852-1567</p></span>
+        </div>
+        <div id="vendor_shop_phone">
+          <p><i class="fas fa-envelope"></i> &nbsp;&nbsp;<span id="email_val">info@naturalbeefarms.ca</p></span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 </section>
 
+  <!--Creates the popup body-->
+  <div class="popup-overlay">
+    <!--Creates the popup content-->
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <div id="add_product_form">
+          <h2>ADD A NEW PRODUCT</h2>
+          <input id="new_product_name" type="text" placeholder="product name">
+          <input id="new_product_desc" type="text" placeholder="description">
+          <input id="new_product_stock" type="number" placeholder="quantity">
+          <input id="new_product_unit" type="text" placeholder="unit">
+          <input id="new_product_cost" type="number" placeholder="price"><br>
+
+          <input type="checkbox" id="organic_check" value="Organic">
+          <label for="organic_check"> Organic</label><br>
+
+          <input type="file" id="upload"/hidden>
+          <label id="upload_product_img" for="upload" class="btn btn-primary">UPLOAD IMAGES</label>
+
+          <br>
+          <button id="save_new_product"  class="btn btn-primary" type="button" onclick="addCode()">SAVE PRODUCT</button>
+        </div>
+      </div>
+  </div>
 <section class="products">
       <div><img id="current_banner" src="../public/images/current_banner.jpg"></div>
-      <div class="flex-grid current_products">
-          <img class="product_img" src="../public/images/honey_jar.png" alt="">
-          <img class="product_img" src="../public/images/honey-treats.png" alt="">
-          <img class="product_img" src="../public/images/candle.jpg" alt="">
-          <img class="product_img" src="../public/images/honey_comb.jpg" alt="">
-          <img class="product_img" src="../public/images/honey_stick.jpg" alt="">
-          <img class="product_img" src="../public/images/lip_product.jpg" alt="">
-          <img class="product_img" src="../public/images/foodwrap.jpg" alt="">
-          <img class="product_img" src="../public/images/beeswax.png" alt="">
+      <div  class="flex-grid current_products">
+          <div class="preview_img_container"><img class="product_img" src="../public/images/honey_jar.png" alt=""><span class="preview_img_text">Premium Honey</span></div>
+          <div class="preview_img_container"><img class="product_img" src="../public/images/honey-treats.png" alt=""><span class="preview_img_text">Flavored Honey Sticks</span></div>
+          <div class="preview_img_container"><img class="product_img" src="../public/images/candle.jpg" alt=""><span class="preview_img_text">Beeswax Candles</span></div>
+          <div class="preview_img_container"><img class="product_img" src="../public/images/honey_comb.jpg" alt=""><span class="preview_img_text">Honey Comb</span></div>
+          <div class="preview_img_container"><img class="product_img" src="../public/images/honey_stick.jpg" alt=""><span class="preview_img_text">Dippers</span></div>
+          <div class="preview_img_container"><img class="product_img" src="../public/images/lip_product.jpg" alt=""><span class="preview_img_text">Beeswax Lip Balm</span></div>
+          <div class="preview_img_container"><img class="product_img" src="../public/images/foodwrap.jpg" alt=""><span class="preview_img_text">Beeswax Cloth</span></div>
+          <div id="insert" class="preview_img_container"><button id="add_product"><img src="../public/images/add_button.png" alt=""><span class="preview_img_text">ADD NEW</span></button></div>
       </div>
 
       <span class="center">
-        <a id="add_product" href="#" class="btn btn-primary"><i class="fa fa-plus"></i>&nbsp;&nbsp;ADD PRODUCT</a>
-        <a id="view_store" href="#" class="btn btn-primary">VIEW SHOP</a>
+
+        <button id="view_store" class="btn btn-primary">VIEW SHOP</button>
       </span>
 </section>
 
@@ -124,4 +167,68 @@
     <a id="viewall_orders_btn" href="#" class="btn btn-primary">VIEW ALL</a>
   </div>
 </section>
+
+<script>
+  var $updateProfileButton = $('#update_profile');
+  var $saveProfileButton = $('#save_profile');
+
+  var $editProfileContainer = $('#profile_info_edit');
+  var $viewProfileContainer = $('#profile_info_view');
+  var $close = $('.close');
+
+  $updateProfileButton.on('click', function() {
+    switchToEditProfile();
+  });
+
+  $saveProfileButton.on('click', function() {
+    switchToViewProfile();
+  });
+
+  $close.on('click', function() {
+    $('.popup-overlay').hide();
+  });
+
+  function switchToEditProfile() {
+
+    $editProfileContainer.show();
+    $viewProfileContainer.hide();
+  }
+
+  function switchToViewProfile() {
+
+    var name = $('#vendor_name').val();
+    var address = $('#vendor_address').val();
+    var phone = $('#vendor_phone').val();
+    var email = $('#vendor_email').val();
+
+    $('#vendor_shop_name').text(name);
+    $('#address_val').text(address);
+    $('#phone_val').text(phone);
+    $('#email_val').text(email);
+
+    $editProfileContainer.hide();
+    $viewProfileContainer.show();
+  }
+
+
+
+    //appends an "active" class to .popup and .popup-content when the "Open" button is clicked
+$("#add_product").on("click", function() {
+  $(".popup-overlay, .popup-content").addClass("active");
+  $('.popup-overlay').show();
+});
+
+//removes the "active" class to .popup and .popup-content when the "Close" button is clicked
+$("#save_new_product").on("click", function() {
+
+  $(".popup-overlay, .popup-content").removeClass("active");
+});
+
+function addCode() {
+   document.getElementById("insert").insertAdjacentHTML("beforebegin",
+   "<div style='text-align:center; margin: 1%; max-width:20%;'><img class='product_img' src='../public/images/honey_soap.png' alt=''><span style='font-size: 20px; color:#464646;'>Honey Oatmeal Soap</span></div>");
+ }
+
+</script>
+
 @endsection

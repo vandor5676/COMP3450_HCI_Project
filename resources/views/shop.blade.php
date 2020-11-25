@@ -2,12 +2,11 @@
 @section('content')
 <head>
     <link rel="stylesheet" href="css/shop.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 
 <header>
 <div class="main-header" style="position: relative;"><img src={{asset("../public/images/shop_banner.jpg")}}>
-  <div id="shop_header_text" style="position: absolute;">
+  <div id="header_text" style="position: absolute;">
     <p><b>SHOP</b></p>
    </div>
  </div>

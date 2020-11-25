@@ -1,4 +1,43 @@
-.banner
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.main-header img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+.banner img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-style: none;
+}
+
+#header_text{
+  font-family: 'BenchNine', sans-serif;
+    display: flex;
+    font-size: 125px;
+    margin-top: 3%;
+    color: #FFFFFF;
+}
+
+/* .banner
 {
     width: 100%;
     background-position: center;
@@ -29,4 +68,4 @@
       font-size: 6em;
       font-family: 'Oswald', sans-serif;
       color: white;
-}
+} */

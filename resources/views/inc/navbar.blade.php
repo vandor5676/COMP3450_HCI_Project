@@ -36,6 +36,14 @@
         </a>
       </div>
 
+      <div class="dropdown">
+        <i class="fas fa-bars" style="color:white;"></i>
+        <div class="dropdown-content">
+        <a href="#">Logout</a>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </body>
