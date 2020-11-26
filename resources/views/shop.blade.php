@@ -64,12 +64,17 @@
             </div>
 
             <div class="addToCart">
-                <button id="cartItem1" onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/logo.png',1,2.99,1)" class="addToCart-link removeButton">Add to Cart</button>
+              <div class="quantityWraper">
+                <div> <button class="QuantityButton" id="subtract">-</button> </div>
+                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <button class="QuantityButton" id="add">+</button></div>
+              </div>
+                <button class="cartitembutton" id="cartItem1" onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/logo.png',1,2.99,1)" class="addToCart-link removeButton">Add to Cart</button>
             </div>
 
             <div style="position: relative; width: auto; font-family: 'Segoe UI','Oswald', 'sans-serif';">
                 <div style="padding: 2em">
-                    <p>$2.99</p>
+                    <p class="price">$2.99</p>
                 </div>
             </div>
         </div>
@@ -96,12 +101,54 @@
             </div>
 
             <div class="addToCart">
-                <button id="cartItem2" onclick="addItem('Lettuce', 'Tranquil Farm', 'In Stock', '/images/logo.png',2,1.99,2)" class="addToCart-link removeButton">Add to Cart</button>
+              <div class="quantityWraper">
+                <div> <button class="QuantityButton" id="subtract">-</button> </div>
+                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <button class="QuantityButton" id="add">+</button></div>
+              </div>
+                <button class="cartitembutton" id="cartItem2" onclick="addItem('Lettuce', 'Tranquil Farm', 'In Stock', '/images/logo.png', 2, 1.99, 2)" class="addToCart-link removeButton">Add to Cart</button>
             </div>
 
             <div style="position: relative; width: auto; font-family: 'Segoe UI','Oswald', 'sans-serif';">
                 <div style="padding: 2em">
-                    <p>$1.99</p>
+                    <p class="price">$1.99</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="productItem">
+            <div class="imageTextContainer">
+                <!-- checkmark -->
+                <svg class="checkmark" id="checkMark1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+                <!--  -->
+                <div class="image" id="image" style="display: inline-block;">
+                    <img class="itemImage" src={{asset("/images/logo.png")}} alt="Product Image">
+                </div>
+
+                <div class="text" id="text">
+                    <div>
+                        <p id="title">Italian Sausage</p>
+                        <p id="subtitle">Sullindeo Farm</p>
+                        <p id="stock">In Stock</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="addToCart">
+              <div class="quantityWraper">
+                <div> <button class="QuantityButton" id="subtract">-</button> </div>
+                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <button class="QuantityButton" id="add">+</button></div>
+              </div>
+                <button class="cartitembutton" id="cartItem1" onclick="addItem('Italian Sausage', 'Sullindeo Farm', 'In Stock', '/images/logo.png',1,2.99,1)" class="addToCart-link removeButton">Add to Cart</button>
+            </div>
+
+            <div style="position: relative; width: auto; font-family: 'Segoe UI','Oswald', 'sans-serif';">
+                <div style="padding: 2em">
+                    <p class="price">$2.99</p>
                 </div>
             </div>
         </div>
@@ -135,6 +182,7 @@
     //
     //end add item
     //
+
 </script>
 
 @endsection
