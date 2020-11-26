@@ -15,14 +15,14 @@
 
 <section class ="profile">
   <div class="flex-grid">
-    <div class="row">
+    <div class="row profile_info">
     <div class="col profile_img">
       <img alt="Avatar" class="avatar" src="../public/images/bee_dark.png">
-      <span class="profile-btn-container">
+      <div class="profile-btn-container">
         <input type="file" id="upload" hidden/>
         <label id="upload_label" for="upload" class="btn btn-primary">UPLOAD IMAGE</label>
       <a id="update_profile" class="btn btn-primary">UPDATE PROFILE</a>
-    </span>
+    </div>
     </div>
     <div id="profile_info" class="col">
       <div id="profile_info_edit">
@@ -102,69 +102,78 @@
       <div><img id="orders_banner" src="../public/images/orders_banner.jpg"></div>
 <div class="orders-wrap">
   <div class="accordion-wrap">
-      <button class="accordion">Order #: 124<i class="fas fa fa-plus plus"></i></button>
+      <button class="accordion">Order #: 124<i class="fas fa fa-plus plus"></i><span class="status_badge order_status_text">PROCESSING</span></button>
       <div class="panel">
         <p class="order_items" id="customer_name"><b>CUSTOMER: </b>Anna Hive</p>
+        <hr class="solid">
         <p class="order_items" id="shipto_address"><b>SHIP TO: </b>
           <p>Anna Hive<p>
             <p>856 Windfield Crescent</p>
             <p>Kamloops, BC V2E1A1</p>
         </p>
+        <hr class="solid">
         <p class="order_items" id="order_id"><b>ORDER #:</b> 121</p>
+        <hr class="solid">
         <p class="order_items" id="order_total"><b>TOTAL:</b> $58.47</p>
-        <p class="order_items" id="order_status"><b>STATUS:</b> PROCESSING</p>
-        <a id="update_order" href="#" class="btn btn-primary">UPDATE ORDER</a>
+        <hr class="solid">
+        <p class="order_items" id="order_status"><b>STATUS:</b> <span class="order_status_text">PROCESSING</span></p>
+        <a id="update_order" class="btn btn-primary">UPDATE STATUS</a>
       </div>
     </div>
   <div class="accordion-wrap">
-      <button class="accordion">Order #: 123<i class="fas fa fa-plus plus"></i></button>
+      <button class="accordion">Order #: 123<i class="fas fa fa-plus plus"></i><span class="status_badge_shipped">COMPLETE</span></button>
       <div class="panel">
         <p class="order_items" id="customer_name"><b>CUSTOMER: </b>Kimberly Bovine</p>
+        <hr class="solid">
         <p class="order_items" id="shipto_address"><b>SHIP TO: </b>
           <p>Henry Fields<p>
             <p>365 Springhill Dr</p>
             <p>Kamloops, BC V2B1G2</p>
         </p>
+        <hr class="solid">
         <p class="order_items" id="order_id"><b>ORDER #:</b> 122</p>
+        <hr class="solid">
         <p class="order_items" id="order_total"><b>TOTAL:</b> $28.11</p>
-        <p class="order_items" id="order_status"><b>STATUS:</b> SHIPPED</p>
-        <a id="update_order" href="#" class="btn btn-primary">UPDATE ORDER</a>
+        <hr class="solid">
+        <p class="order_items" id="order_status"><b>STATUS:</b> COMPLETE</p>
       </div>
       </div>
     <div class="accordion-wrap">
-      <button class="accordion">Order #: 122<i class="fas fa fa-plus plus"></i></button>
+      <button class="accordion">Order #: 122<i class="fas fa fa-plus plus"></i><span class="status_badge_shipped">COMPLETE</span></button>
       <div class="panel">
         <p class="order_items" id="customer_name"><b>CUSTOMER: </b>Quinton Beets</p>
+        <hr class="solid">
         <p class="order_items" id="shipto_address"><b>SHIP TO: </b>
           <p>Quinton Beets<p>
             <p>856 Windfield Crescent</p>
             <p>Kamloops, BC V2E1A1</p>
         </p>
+        <hr class="solid">
         <p class="order_items" id="order_id"><b>ORDER #:</b> 123</p>
+        <hr class="solid">
         <p class="order_items" id="order_total"><b>TOTAL:</b>$15.24</p>
-    <p class="order_items" id="order_status"><b>STATUS:</b> SHIPPED</p>
-        <a id="update_order" href="#" class="btn btn-primary">UPDATE ORDER</a>
+        <hr class="solid">
+        <p class="order_items" id="order_status"><b>STATUS:</b> COMPLETE</p>
       </div>
       </div>
     <div class="accordion-wrap">
-      <button class="accordion">Order #: 121<i class="fas fa fa-plus plus"></i></button>
+      <button class="accordion">Order #: 121<i class="fas fa fa-plus plus"></i><span class="status_badge_shipped">COMPLETE</span></button>
       <div class="panel">
         <p class="order_items" id="customer_name"><b>CUSTOMER: </b>Greg Rancher</p>
+        <hr class="solid">
         <p class="order_items" id="shipto_address"><b>SHIP TO: </b>
           <p>Greg Rancher<p>
             <p>574 Fortune Dr</p>
             <p>Kamloops, BC V2B3E6</p>
         </p>
+        <hr class="solid">
         <p class="order_items" id="order_id"><b>ORDER #:</b> 124</p>
+        <hr class="solid">
         <p class="order_items" id="order_total"><b>TOTAL:</b> $34.58</p>
-    <p class="order_items" id="order_status"><b>STATUS:</b> SHIPPED</p>
-        <a id="update_order" href="#" class="btn btn-primary">UPDATE ORDER</a>
+        <hr class="solid">
+        <p class="order_items" id="order_status"><b>STATUS:</b> COMPLETE</p>
       </div>
     </div>
-  </div>
-
-  <div class="center">
-    <a id="viewall_orders_btn" href="#" class="btn btn-primary">VIEW ALL</a>
   </div>
 </section>
 
@@ -228,6 +237,12 @@ function addCode() {
    document.getElementById("insert").insertAdjacentHTML("beforebegin",
    "<div style='text-align:center; margin: 1%; max-width:20%;'><img class='product_img' src='../public/images/honey_soap.png' alt=''><span style='font-size: 20px; color:#464646;'>Honey Oatmeal Soap</span></div>");
  }
+
+$('#update_order').on('click', (function() {
+  $(this).closest('.accordion-wrap').find('.order_status_text').text('COMPLETE');
+  $(this).closest('.accordion-wrap').find('.status_badge').css('background-color', ' #426a5a')
+  $(this).hide();
+}));
 
 </script>
 

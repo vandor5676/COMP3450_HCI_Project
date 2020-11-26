@@ -3,6 +3,7 @@
 <header>
 <div class="main-header" ><img src={{asset("../public/images/main_header.png")}}></div>
 <div class="banner" ><img src="../public/images/banner.png"></div>
+<div class="mobile_banner" ><img src="../public/images/mobile_banner.png"></div>
 </header>
 
 <main class="container">

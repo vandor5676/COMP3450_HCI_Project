@@ -11,6 +11,10 @@ body {
   width: 100%;
 }
 
+.active {
+  border:none;
+}
+
 .modal-body {
   /* background-color: #464646; */
 }
