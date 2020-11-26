@@ -82,7 +82,7 @@
           <p style="font-size: 35px;"><b> Berry Farm </b></p>
           <p style="font-size: 20px;">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <a id="visit_store" href="#" class="btn btn-primary">VISIT STORE</a>
+          <a id="visit_store" href="/berryFarm" class="btn btn-primary">VISIT STORE</a>
         </div>
       </div>
       <div class="store_preview">

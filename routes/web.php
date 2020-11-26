@@ -54,3 +54,6 @@ Route::get('/vendors', function () {
 Route::get('/NaturalBeeFarm', function () {
     return view('vendors/NaturalBeeFarm');
 });
+Route::get('/berryFarm', function () {
+    return view('vendors/berryFarm');
+});
