@@ -59,9 +59,3 @@ $(document).ready(function() {
       }
     });
   }
-/* Auto Scroll */
-
-
-/* CSS Transitions */
-
-/* Testimonials */

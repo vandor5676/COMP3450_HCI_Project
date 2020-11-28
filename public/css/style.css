@@ -7,6 +7,12 @@
 body {
   background-color:#f5f0f0!important;
   margin: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+.active {
+  border:none;
 }
 
 .modal-body {
@@ -155,7 +161,7 @@ body {
   color: white;
 }
 
-.main-header {
+/* .main-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +190,7 @@ img {
     max-width: 100%;
     display: block;
     border-style: none;
-}
+} */
 
 .center {
   display: block;

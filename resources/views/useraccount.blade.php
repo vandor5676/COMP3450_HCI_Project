@@ -1,8 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <header>
-<div class="main-header" ><img src="../public/images/main_header.png"></div>
-<div class="banner" ><img src="../public/images/banner.png"></div>
+<div class="main-header" style="position: relative;"><img src={{asset("../public/images/vendor_header.jpg")}}>
+  <div id="header_text" style="position: absolute;">
+    <p><b>WELCOME BACK</b></p>
+   </div>
+ </div>
 </header>
 
 <section class ="profile">

@@ -10,7 +10,7 @@
 </head>
 <header>
 <div class="main-header" style="position: relative;"><img src={{asset("../public/images/bannerapples.jpg")}}>
-  <div id="cart_header_text" style="position: absolute;">
+  <div id="header_text" style="position: absolute;">
     <p><b>CHECKOUT</b></p>
    </div>
  </div>

@@ -1,32 +1,44 @@
-.banner
-{
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 14cm;
-}
-.banner#checkout
-{
-    background-image: linear-gradient(rgba(21, 193, 58, 0.31),rgb(21, 193, 58, 0.31)), url(../images/cart/bannerapples.jpg);
-}
-.banner#cart
-{
-    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/cart/bannerapples.jpg);
-}
-.banner#beeFarm
-{
-    background-image: linear-gradient(rgb(193,21,21,0.31),rgb(193,21,21,0.31)), url(../images/bees_banner.jpg);
-}
-.bannerImage
-{
-    width: 100%;
-
-}
-.bannerTitle
-{
+.main-header {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.main-header img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.mobile_banner {
+  display: none;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+.banner img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-style: none;
+}
+
+#header_text{
+  font-family: 'BenchNine', sans-serif;
+    display: flex;
+    font-size: 125px;
+    margin-top: 3%;
+    color: #FFFFFF;
       justify-content: center;
       align-items: center;
       height: 7cm;
@@ -34,3 +46,34 @@
       font-family: 'Barlow Condensed', sans-serif;
       color: white;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .banner {
+    display: none;
+  }
+
+  .mobile_banner {
+    display: block;
+  }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  .banner {
+    display: none;
+  }
+
+  .mobile_banner {
+    display: block;
+  }
+
+
+ }
