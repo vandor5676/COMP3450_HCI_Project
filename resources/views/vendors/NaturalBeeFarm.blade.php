@@ -2,6 +2,7 @@
 @section('content')
 <header>
   <link rel="stylesheet" href="css/naturalBeeFarm.css">
+  <link rel="stylesheet" href="css/productModal.css">
   <!-- <link rel="stylesheet" href="css/banners.css"> -->
   <!-- <link rel="stylesheet" href="css/banners.css"> -->
   <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> -->
@@ -78,5 +79,21 @@
 
   </section>
 
+  <div class="modal-window popup" id="sausage-modal">
+    <div class="flexWraper">
+      <div class="flexItem"><img src={{asset("/images/product_sausage.png")}} style="max-width: 150px; float: left;" alt="Product Image"></div>
+
+      <div class="flexItem">
+        <h3 style="margin-top: 5px; padding-left: 15px;">Italian Sausage</h3>
+        <p class="modal-text">Sullindeo Farm</p>
+        <p class="modal-text">In Stock</p>
+        <p class="modal-text">$2.99</p>
+        <p class="modal-text">Italian Sausage (2 per pack), sourced and produced at Sullindeo Farm.</p>
+        <p class="modal-text" id="sausage-close" style="cursor: pointer;">Close</p>
+      </div>
+    </div>
+  </div>
+
+  <script></script>
 
   @endsection
