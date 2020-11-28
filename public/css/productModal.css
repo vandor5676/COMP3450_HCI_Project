@@ -1,0 +1,35 @@
+.modal-window {
+    display: none;
+    background-color: rgb(70,70,70);
+    color: white;
+    /* width: 600px; */
+    height: auto;
+    border: 1px #303030;
+    position: absolute;
+    top: 116%;
+    left: calc(50% - 300px);
+    z-index: 999;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0.8em;
+    box-shadow: 1px 4px 20px 9px #2b2a2a96;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+h3, .h3 {
+    font-size: 1.75rem;
+}
+.flexWraper
+{
+    display: flex;
+    flex-direction: column;
+}
+.flexItem
+{
+    flex: 1;
+}
