@@ -39,6 +39,12 @@ img {
     font-size: 125px;
     margin-top: 3%;
     color: #FFFFFF;
+      justify-content: center;
+      align-items: center;
+      height: 7cm;
+      font-size: 6em;
+      font-family: 'Barlow Condensed', sans-serif;
+      color: white;
 }
 
 /* Extra small devices (phones, 600px and down) */

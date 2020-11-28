@@ -49,3 +49,11 @@ Route::get('/shop', function () {
 Route::get('/vendors', function () {
     return view('vendors');
 });
+
+//routes for vednors
+Route::get('/NaturalBeeFarm', function () {
+    return view('vendors/NaturalBeeFarm');
+});
+Route::get('/berryFarm', function () {
+    return view('vendors/berryFarm');
+});
