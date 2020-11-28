@@ -14,6 +14,7 @@
   display: none;
 }
 
+
 .banner {
     display: flex;
     justify-content: center;
@@ -41,33 +42,26 @@ img {
     color: #FFFFFF;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-  .banner {
-    display: none;
-  }
-
-  .mobile_banner {
-    display: block;
-  }
-
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 
   .banner {
     display: none;
   }
 
   .mobile_banner {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2em;
+    width: 100%;
   }
 
+  .mobile_banner img {
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%
+  }
 
  }

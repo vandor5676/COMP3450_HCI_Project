@@ -80,7 +80,11 @@
       </div>
   </div>
 <section class="products">
-      <div><img id="current_banner" src="../public/images/current_banner.jpg"></div>
+      <div>
+        <img id="product_banner" src="../public/images/products_banner.png">
+        <img id="product_900_banner" src="../public/images/products_900_banner.png">
+        <img id="product_700_banner" src="../public/images/products_700_banner.png">
+      </div>
       <div  class="flex-grid current_products">
           <div class="preview_img_container"><img class="product_img" src="../public/images/honey_jar.png" alt=""><span class="preview_img_text">Premium Honey</span></div>
           <div class="preview_img_container"><img class="product_img" src="../public/images/honey-treats.png" alt=""><span class="preview_img_text">Flavored Honey Sticks</span></div>
@@ -99,7 +103,11 @@
 </section>
 
 <section class="orders">
-      <div><img id="orders_banner" src="../public/images/orders_banner.jpg"></div>
+      <div>
+        <img id="orders_banner" src="../public/images/orders_banner.png">
+        <img id="orders_900_banner" src="../public/images/orders_900_banner.png">
+        <img id="orders_700_banner" src="../public/images/orders_700_banner.png">
+      </div>
 <div class="orders-wrap">
   <div class="accordion-wrap">
       <button class="accordion">Order #: 124<i class="fas fa fa-plus plus"></i><span class="status_badge order_status_text">PROCESSING</span></button>

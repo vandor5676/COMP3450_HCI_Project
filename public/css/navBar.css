@@ -105,11 +105,37 @@
   }
   .navbarLogo
   {
-    max-width: 11em;
+    max-width: 10em;
     height: auto;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
+
+
+    div.navbarItem
+    {
+      font-size: 20px;
+      padding: 0 10px;
+      margin: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      border-left: solid 1px white;
+      border-right: solid 1px white;
+    }
+
+    .navbarLogo
+    {
+      max-width: 9em;
+      height: auto;
+    }
+
+}
+
+  @media only screen and (max-width: 700px) {
 
 
     .bar {

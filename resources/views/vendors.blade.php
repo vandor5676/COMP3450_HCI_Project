@@ -26,9 +26,50 @@
       </div>
   </div>
 
-<!-- Products -->
 
-        <div class="productItem">
+
+
+  <div class="cards">
+    <div class="cards__item">
+      <div class="card">
+        <div class="card__image">
+          <img class="vendor_logo" src={{asset("/images/bee_dark.png")}} alt="Product Image">
+        </div>
+        <div class="card__content" style="background-color: #f7b538;">
+          <div class="card__title">Flex</div>
+          <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+          <button class="view_shop_btn">VIEW SHOP</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards__item">
+      <div class="card">
+        <div class="card__image">
+          <img class="vendor_logo" src={{asset("/images/farm_dark.png")}} alt="Product Image">
+        </div>
+        <div class="card__content" style="background-color: #426a5a;">
+          <div class="card__title">Flex</div>
+          <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+          <button class="view_shop_btn">VIEW SHOP</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards__item">
+      <div class="card">
+        <div class="card__image">
+          <img class="vendor_logo" src={{asset("/images/bee_dark.png")}} alt="Product Image">
+        </div>
+        <div class="card__content"  style="background-color: #9e2a2b;">
+          <div class="card__title">Flex</div>
+          <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+          <button class="view_shop_btn">VIEW SHOP</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        <!-- <div class="productItem">
             <div class="logo_container">
                     <img class="vendor_logo" src={{asset("/images/bee.png")}} alt="Product Image">
                     <div class="vendor_text">
@@ -48,7 +89,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. 
 
 
 
-                </div>
+                </div> -->
 
 </div>
 

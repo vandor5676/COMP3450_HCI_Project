@@ -3,7 +3,7 @@
 <header>
 <div class="main-header" ><img src={{asset("../public/images/main_header.png")}}></div>
 <div class="banner" ><img src="../public/images/banner.png"></div>
-<div class="mobile_banner" ><img src="../public/images/mobile_banner.png"></div>
+<div class="mobile_banner"><img src="../public/images/mobile_banner.png"></div>
 </header>
 
 <main class="container">
@@ -129,14 +129,9 @@
   </div>
 
   <div class="category">
-    <div class="row">
-      <div class="col-lg">
-        <p id="cat_title">GOODS</p>
-      </div>
-      <div class="col-auto">
-        <img src="../public/images/category-img.png">
-      </div>
-    </div>
+      <img id="cat_banner" src="../public/images/category_banner.png">
+      <img id="cat_900_banner" src="../public/images/category_900_banner.png">
+      <img id="cat_700_banner" src="../public/images/category_700_banner.png">
   </div>
 
   <div class="cat_buttons">
