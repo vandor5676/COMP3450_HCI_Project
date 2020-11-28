@@ -72,7 +72,7 @@
             <div class="addToCart">
               <div class="quantityWraper">
                 <div> <button class="QuantityButton" id="subtract">-</button> </div>
-                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <input class="QuantityInput" id="quantity" value="1" type="number"></div>
                 <div> <button class="QuantityButton" id="add">+</button></div>
               </div>
                 <button class="cartitembutton" id="cartItem1" onclick="addItem('Farm Eggs', 'Thistle Farm', 'In Stock', '/images/product_eggs.png',1,2.99,1)" class="addToCart-link removeButton">Add to Cart</button>
@@ -120,7 +120,7 @@
             <div class="addToCart">
               <div class="quantityWraper">
                 <div> <button class="QuantityButton" id="subtract">-</button> </div>
-                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <input class="QuantityInput" id="quantity" value="1" type="number"></div>
                 <div> <button class="QuantityButton" id="add">+</button></div>
               </div>
                 <button class="cartitembutton" id="cartItem2" onclick="addItem('Lettuce', 'Tranquille Farm', 'In Stock', '/images/product_lettuce.png', 1, 1.99, 2)" class="addToCart-link removeButton">Add to Cart</button>
@@ -168,7 +168,7 @@
             <div class="addToCart">
               <div class="quantityWraper">
                 <div> <button class="QuantityButton" id="subtract">-</button> </div>
-                <div> <input class="QuantityInput" value="1" type="number"></div>
+                <div> <input class="QuantityInput" id="quantity" value="1" type="number"></div>
                 <div> <button class="QuantityButton" id="add">+</button></div>
               </div>
                 <button class="cartitembutton" id="cartItem1" onclick="addItem('Italian Sausage', 'Sullindeo Farm', 'In Stock', '/images/product_sausage.png',1,2.99,3)" class="addToCart-link removeButton">Add to Cart</button>
@@ -276,6 +276,18 @@
           $("#sausage-modal").hide();
         });
         */
+        
+        $("#add").click(function(){
+          var num = parseInt($('#quantity').val(), 10);
+          $('#quantity').val(num+1);
+        });
+
+        $("#subtract").click(function(){
+          var num = parseInt($('#quantity').val(), 10);
+          if(num > 0){
+            $('#quantity').val(num-1);
+          }
+        });
 
       });
 
