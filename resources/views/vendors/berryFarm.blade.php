@@ -8,7 +8,7 @@
 
 
 
-  <section class="profile">
+  <section class="profile leftRightMargin">
     <div class="flex-grid">
       <div class="row">
         <div class="col profile_img">
@@ -53,7 +53,7 @@
     </div>
   </section>
 
-  <section class="products">
+  <section class="products leftRightMargin">
     <!-- big section banner -->
     <div class="bigSectionBanner">
       <p class="bigSectionBannerText">Products</p>

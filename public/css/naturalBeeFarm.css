@@ -1,4 +1,65 @@
-
+*
+{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.profile {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.profile_img {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#vendor_shop_name {
+    font-weight: 700;
+    color: #464646;
+    font-size: 40px;
+}
+#vendor_date {
+    font-weight: 400;
+    color: #426a5a;
+    font-size: 20px;
+}
+#vendor_address {
+    font-weight: 400;
+    color: rgb(70, 70, 70);
+    font-size: 25px;
+    margin: 3% 0% 3% 3%;
+}
+.avatar {
+    max-width: 60%;
+    height: auto;
+    border-style: solid;
+    border-image: initial;
+    border-width: 2px;
+    border-color: rgb(236, 229, 229);
+    border-radius: 10px;
+    padding: 2%;
+}
+#vendor_contact {
+    font-weight: 400;
+    color: rgb(70, 70, 70);
+    font-size: 25px;
+    margin: 3% 0% 3% 3%;
+}
+.products {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+.product_img {
+    max-width: 20%;
+    margin: 2%;
+    border-style: solid;
+    border-image: initial;
+    border-width: 2px;
+    border-color: rgb(236, 229, 229);
+}
 /* section banner */
 .sectionBannerText#location
 {
@@ -96,6 +157,15 @@
 }
 /* end big section banner */
 
+.current_products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.leftRightMargin
+{
+    /* margin: 7em 5em 5em 5em; */
+}
 
 @media only screen and (max-width: 1192px) {
     .col
