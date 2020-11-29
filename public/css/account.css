@@ -219,6 +219,7 @@ input[type=number], select {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-top: 4%;
 }
 
 .product_img {
@@ -460,7 +461,15 @@ input[type=number], select {
   padding: 0px 20px;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1024px) {
+
+.preview_img_text{
+    font-size: 18px;
+}
+
+}
+
+
 @media only screen and (max-width: 900px) {
 
   #product_banner{
@@ -488,13 +497,16 @@ input[type=number], select {
   }
 
 .preview_img_text{
-    font-size: 15px;
+    font-size: 20px;
 }
 
 
+.preview_img_container {
+    max-width: 30%;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+}
+
 @media only screen and (max-width: 768px) {
 
   #product_banner{
@@ -541,11 +553,35 @@ input[type=number], select {
   }
 
   .preview_img_text{
-      font-size: 10px;
+      font-size: 15px;
   }
   .order_img_text{
       font-size: 20px;
   }
+.preview_img_container {
+    max-width: 40%;
+}
 
 
+ }
+
+@media only screen and (max-width: 411px) {
+
+  .preview_img_text{
+      font-size: 14px;
+  }
+  .order_img_text{
+      font-size: 20px;
+  }
+.preview_img_container {
+    max-width: 48%;
+}
+
+
+}
+
+ @media only screen and (max-width: 704px) {
+   .row{
+     display: block;
+   }
  }
