@@ -5,6 +5,17 @@
   font-family: 'BarlowCondensed', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+    border-style: none;
+}
+
+.order_img_text{
+    font-size: 25px;
+}
+
+
 .profile {
   margin-left: 10%;
   margin-right: 10%;
@@ -27,6 +38,12 @@
     border-width: 2px;
     border-color: #ece5e5;
     border-radius: 10px;
+    padding:2%;
+}
+
+.avatar-user {
+    max-width: 100%;
+    height: auto;
     padding:2%;
 }
 
@@ -196,7 +213,6 @@ input[type=number], select {
   display: none;
 }
 
-
 .current_products {
   display: flex;
   flex-direction: row;
@@ -209,6 +225,9 @@ input[type=number], select {
   border: solid;
   border-width: 2px;
   border-color: #ece5e5;
+  max-width: 100%;
+  display: block;
+  border-style: none;
 }
 
 .preview_img_container {
@@ -276,6 +295,12 @@ input[type=number], select {
   border-style: none;
 }
 
+#product_plus_btn{
+  max-width: 100%;
+  display: block;
+  border-style: none;
+}
+
 #add_product_form {
   color: #464646;
   padding: 5%;
@@ -309,7 +334,7 @@ input[type=number], select {
   background-color:  #f7b538;
   border: none;
   margin:10px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 #view_store:hover{
@@ -364,6 +389,20 @@ input[type=number], select {
 
 .plus{
   float: right;
+}
+
+.order-img-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.order_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
 }
 
 .panel {
@@ -422,7 +461,7 @@ input[type=number], select {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
 
   #product_banner{
     display: none;
@@ -447,6 +486,10 @@ input[type=number], select {
   #orders_900_banner{
     display: flex;
   }
+
+.preview_img_text{
+    font-size: 15px;
+}
 
 
 }
@@ -496,5 +539,13 @@ input[type=number], select {
     border-radius: 5px;
     padding: 0px 15px;
   }
+
+  .preview_img_text{
+      font-size: 10px;
+  }
+  .order_img_text{
+      font-size: 20px;
+  }
+
 
  }

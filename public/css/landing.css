@@ -1,0 +1,280 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: BarlowCondensed;
+    src: url('fonts\\BarlowCondensed-SemiBold.ttf');
+    /* src: url({{asset('/public/fonts/BarlowCondensed-SemiBold.ttf')}}); */
+}
+
+img {
+    max-width: 100%;
+    display: flex;
+    border-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner{
+  margin:0px;
+}
+
+.landing-bar {
+ background-color:#464646;
+ font-family: 'BarlowCondensed','Ebrima', sans-serif;
+ height: 100px;
+ width: 100%;
+ display:  flex;
+ justify-content: space-around;
+ position: relative;
+ z-index: 1000;
+ transition: all 0.3s ease-in-out;
+}
+
+.mobile_bar {
+  display: none;
+}
+
+.navbarLink {
+    display: block;
+    color: white;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+  }
+
+#user-login{
+
+  padding: 1.5% 10%;
+  background-color:  #9e2a2b;
+  border-radius: 5px;
+
+}
+
+#user-login:hover{
+
+  opacity: 0.5;
+  color:white;
+  text-decoration: none;
+}
+
+  div.verticalCenterContainer
+  {
+    position:relative;
+  }
+
+  div.navbarItem
+  {
+    font-size: 25px;
+    padding: 0 10px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbarLogo
+  {
+    max-width: 10em;
+    height: auto;
+  }
+
+  .container {
+    max-width: 100%;
+    margin:auto;
+    padding:2rem 5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  #signin{
+    font-size:50px;
+    padding:3% 0;
+  }
+
+
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 65px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+      border-radius: 5px;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  #submit {
+    background-color: #426a5a;
+    color: white;
+    padding: 14px 65px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #submit:hover {
+    background-color: #464646;
+    text-decoration: none;
+
+  }
+
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 25px;
+    background-color: #9e2a2b;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .bottom-container{
+    padding:5% 10%;
+    width: 100%;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+
+
+    @media only screen and (max-width: 700px) {
+      .navbarLogo
+      {
+        max-width: 10em !important;
+        height: auto !important;
+      }
+      .container {
+        max-width: 100%;
+        margin:auto;
+        padding:2rem 3rem;
+      }
+
+      .modal-content {
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      #signin{
+        font-size:40px;
+        padding:3% 0;
+      }
+    }
+
+
+    @media only screen and (max-width: 500px) {
+      .navbarLogo
+      {
+        max-width: 8em !important;
+        height: auto !important;
+      }
+
+      .navbarItem
+      {
+        font-size: 15px !important;
+      }
+
+      .container {
+        max-width: 100%;
+        margin:auto;
+        padding:2rem 3rem;
+      }
+
+      .modal-content {
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      #signin{
+        font-size:30px;
+        padding:2% 0;
+      }
+
+      .bottom-container{
+        padding:3% 8%;
+        width: 100%;
+      }
+
+    }
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }

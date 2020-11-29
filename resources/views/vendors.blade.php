@@ -1,173 +1,103 @@
-<!-- @extends('layouts.app')
+@include('inc.navbar')
+@extends('layouts.app')
 @section('content')
 <head>
     <link rel="stylesheet" href="css/vendors.css">
 </head>
 
 <header>
-<!-- <div class="main-header" style="position: relative;"><img  src={{asset("images/vendor_banner.jpg")}}>
-  <div id="vendor_header_text" style="position: absolute;">
+<div class="main-header" style="position: relative;"><img  src={{asset("images/headerImages/vendor_banner.jpg")}}>
+  <div id="header_text" style="position: absolute;">
     <p><b>VENDORS</b></p>
    </div>
  </div>
-</header> -->
+</header>
 
-
-
-<!-- Filters Bar -->
-<div class="content">
-  <div class="filterContainer">
-    <div class="filterSidebar">
-      <ul style="list-style-type: none;">
-        <h5>Filters</h5>
-        <li><a class="sidebar-link" href="">Newest</a></li>
-        <li><a class="sidebar-link" href="">Certified Organic</a></li>
-        <li><a class="sidebar-link" href="">Ascending</a></li>
-        <li><a class="sidebar-link" href="">Descending</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="productContainer">
-
-    <!-- Product -->
-    <div class="productItem">
-      <div class="logo_container">
-        <div class="vendorLogoWraper"> <img class="vendor_logo" src={{asset("/images/bee.png")}} alt="Product Image"></div>
-        <div class="vendor_text">
-          <p style="font-size: 35px;"><b> Natural Bee Farm </b></p>
-          <p style="font-size: 20px;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <a id="visit_store" href="/NaturalBeeFarm" class="btn btn-primary">VISIT STORE</a>
+    <div class="content">
+          <div class="dropdown">
+            <button class="dropbtn">FILTER&nbsp;&nbsp;<i class="fas fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+            <a href="">Newest</a>
+            <a href="">Certified Organic</a>
+            <a href="">Ascending</a>
+            <a href="">Descending</a>
+            </div>
         </div>
-      </div>
-      <div class="store_preview">
-        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="carouselFlexContainer">
-                <img class="product_img_preview" src="images/honey_jar.png" alt="" >
-                <img class="product_img_preview" src="images/honey-treats.png" alt="">
-                <img class="product_img_preview" src="images/candle.jpg" alt="">
-                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
-              </div>
-            </div>
-            <div class="carousel-item">
-            <div class="carouselFlexContainer">
-                <img class="product_img_preview" src="images/honey_jar.png" alt="">
-                <img class="product_img_preview" src="images/honey-treats.png" alt="">
-                <img class="product_img_preview" src="images/candle.jpg" alt="">
-                <img class="product_img_preview" src="images/honey_comb.jpg" alt="">
-              </div>
-            </div>
-
-
-
+    </div>
 
   <div class="cards">
-    <div class="cards__item">
+    <div id=class="" class="cards__item">
       <div class="card">
         <div class="card__image">
-          <img class="vendor_logo" src={{asset("/images/bee_dark.png")}} alt="Product Image">
+          <img class="vendor_logo" src={{asset("/images/vendorLogos/bee_dark.png")}} alt="Product Image">
         </div>
         <div class="card__content" style="background-color: #f7b538;">
-          <div class="card__title">Flex</div>
-          <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-          <button class="view_shop_btn">VIEW SHOP</button>
+          <div class="card__title">Natural Bee Farm</div>
+          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="view_shop_btn" href="/NaturalBeeFarm">VIEW SHOP</a>
+          <p class="featured_title">Featured Products</p>
+          <div class="product_preview_container">
+            <div class="product_img_preview">
+            <img  class="bee_img" src="images/vendorProducts/honey_jar.png" alt="">
+          </div>
+          <div class="product_img_preview">
+            <img  class="bee_img" src="images/vendorProducts/honey_comb.jpg" alt="">
+          </div>
+            <div class="product_img_preview">
+            <img class="bee_img" src="images/vendorProducts/candle.jpg" alt="">
+          </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="cards__item">
       <div class="card">
         <div class="card__image">
-          <img class="vendor_logo" src={{asset("/images/farm_dark.png")}} alt="Product Image">
+          <img class="vendor_logo" src={{asset("/images/vendorLogos/farm_dark.png")}} alt="Product Image">
         </div>
         <div class="card__content" style="background-color: #426a5a;">
-          <div class="card__title">Flex</div>
-          <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-          <button class="view_shop_btn">VIEW SHOP</button>
+          <div class="card__title">Market Fresh Farm</div>
+          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="view_shop_btn" href="/MarketFreshFarm">VIEW SHOP</a>
+          <p class="featured_title">Featured Products</p>
+          <div class="product_preview_container">
+            <div class="product_img_preview">
+            <img  class="farm_img" src="images/vendorProducts/carrots.jpg" alt="">
+          </div>
+          <div class="product_img_preview">
+            <img  class="farm_img" src="images/vendorProducts/grapes.jpg" alt="">
+          </div>
+            <div class="product_img_preview">
+            <img class="farm_img" src="images/vendorProducts/strawberrys.jpg" alt="">
+          </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="cards__item">
       <div class="card">
         <div class="card__image">
-          <img class="vendor_logo" src={{asset("/images/bee_dark.png")}} alt="Product Image">
+          <img class="vendor_logo" src={{asset("/images/vendorLogos/meatfarm.png")}} alt="Product Image">
         </div>
-        <div class="card__content"  style="background-color: #9e2a2b;">
-          <div class="card__title">Flex</div>
-          <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-          <button class="view_shop_btn">VIEW SHOP</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-        <!-- <div class="productItem">
-            <div class="logo_container">
-                    <img class="vendor_logo" src={{asset("/images/bee.png")}} alt="Product Image">
-                    <div class="vendor_text">
-                    <p style="font-size: 35px;"><b> Natural Bee Farm </b></p>
-                    <p style="font-size: 20px;">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-<a id="visit_store" href="#" class="btn btn-primary">VISIT STORE</a>
-                  </div>
-                  </div>
-
-     <!-- Product -->
-     <div class="productItem">
-      <div class="logo_container">
-        <div class="vendorLogoWraper"> <img class="vendor_logo" id="berryLogo" src={{asset("/images/berryWhite.png")}} alt="Product Image"></div>
-        <div class="vendor_text">
-          <p style="font-size: 35px;"><b> Berry Farm </b></p>
-          <p style="font-size: 20px;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ipsum libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-          <a id="visit_store" href="/berryFarm" class="btn btn-primary">VISIT STORE</a>
-        </div>
-      </div>
-      <div class="store_preview">
-        <div id="carouselBerryControls" class="carousel slide" data-interval="false" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="carouselFlexContainer">
-                <img class="product_img_preview" src="images/vendorProduce/Blackberries.jpg" alt="">
-                <img class="product_img_preview" src="images/vendorProduce/cherrys.jpg" alt="">
-                <img class="product_img_preview" src="images/vendorProduce/grapes.jpg" alt="">
-                <img class="product_img_preview" src="images/vendorProduce/strawberrys.jpg" alt="">
-              </div>
-            </div>
-            <div class="carousel-item">
-            <div class="carouselFlexContainer">
-            <img class="product_img_preview" src="images/vendorProduce/Blackberries.jpg" alt="">
-                <img class="product_img_preview" src="images/vendorProduce/cherrys.jpg" alt="">
-                <img class="product_img_preview" src="images/vendorProduce/grapes.jpg" alt="">
-                <img class="product_img_preview" src="images/vendorProduce/strawberrys.jpg" alt="">
-              </div>
-            </div>
-
+        <div class="card__content" style="background-color: #9e2a2b;">
+          <div class="card__title">Far Farm Meats</div>
+          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a class="view_shop_btn" href="/FarFarmMeats">VIEW SHOP</a>
+          <p class="featured_title">Featured Products</p>
+          <div class="product_preview_container">
+            <div class="product_img_preview">
+            <img  class="meat_img" src="images/vendorProducts/steak.jpg" alt="">
           </div>
-          <a class="carousel-control-prev" href="#carouselBerryControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselBerryControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="product_img_preview">
+            <img  class="meat_img" src="images/vendorProducts/ground_meat.jpg" alt="">
+          </div>
+            <div class="product_img_preview">
+            <img class="meat_img" src="images/vendorProducts/sausage.jpg" alt="">
+          </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- Product end -->
   </div>
-</div>
 
-</body>
-<script>
-
-</script>
-
-</div>
-
-</html>
-
-@endsection -->
+@endsection

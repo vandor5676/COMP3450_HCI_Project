@@ -14,19 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('landing');
+});
+
+Route::get('/home', function () {
     return view('home');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/youthemployment', function () {
-    return view('youthemployment');
 });
 
 //route for cart page
@@ -42,6 +34,10 @@ Route::get('/vendoraccount', function () {
     return view('vendoraccount');
 });
 
+Route::get('/useraccount', function () {
+    return view('useraccount');
+});
+
 Route::get('/shop', function () {
     return view('shop');
 });
@@ -52,8 +48,13 @@ Route::get('/vendors', function () {
 
 //routes for vednors
 Route::get('/NaturalBeeFarm', function () {
-    return view('vendors/NaturalBeeFarm');
+    return view('NaturalBeeFarm');
 });
-Route::get('/berryFarm', function () {
-    return view('vendors/berryFarm');
+
+Route::get('/MarketFreshFarm', function () {
+    return view('MarketFreshFarm');
+});
+
+Route::get('/FarFarmMeats', function () {
+    return view('FarFarmMeats');
 });

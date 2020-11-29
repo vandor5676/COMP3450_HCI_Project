@@ -1,15 +1,15 @@
+@include('inc.navbar')
 @extends('layouts.app')
 @section('cart')
 
 <head>
     <link rel="stylesheet" href="css/cart.css">
-    <!-- <link rel="stylesheet" href="css/banners.css"> -->
     <link rel="stylesheet" href="css/checkout.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 </head>
 <header>
-<div class="main-header" style="position: relative;"><img src={{asset("../public/images/bannerapples.jpg")}}>
+<div class="main-header" style="position: relative;"><img src={{asset("/images/headerImages/bannerapples.jpg")}}>
   <div id="header_text" style="position: absolute;">
     <p><b>CHECKOUT</b></p>
    </div>

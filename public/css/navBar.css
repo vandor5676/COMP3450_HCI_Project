@@ -66,8 +66,6 @@
     align-items: center;
     width: 100%;
 
-    border-left: solid 1px white;
-    border-right: solid 1px white;
   }
 
   .navbarItem:first-child {
@@ -123,8 +121,6 @@
       align-items: center;
       width: 100%;
 
-      border-left: solid 1px white;
-      border-right: solid 1px white;
     }
 
     .navbarLogo
