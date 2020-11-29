@@ -4,6 +4,7 @@
 
 <head>
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
 </head>
