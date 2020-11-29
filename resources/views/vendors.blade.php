@@ -26,7 +26,7 @@
     </div>
 
   <div class="cards">
-    <div id=class="" class="cards__item">
+    <div class="cards__item">
       <div class="card">
         <div class="card__image">
           <img class="vendor_logo" src={{asset("/images/vendorLogos/bee_dark.png")}} alt="Product Image">
