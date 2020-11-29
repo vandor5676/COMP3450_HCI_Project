@@ -1,3 +1,4 @@
+@include('inc.navbar')
 @extends('layouts.app')
 @section('content')
 
@@ -8,7 +9,7 @@
 </head>
 
 <header>
-<div class="main-header" style="position: relative;"><img src={{asset("../public/images/bannerapples.jpg")}}>
+<div class="main-header" style="position: relative;"><img src={{asset("/images/headerImages/bannerapples.jpg")}}>
   <div id="header_text" style="position: absolute;">
     <p><b>CART</b></p>
    </div>
@@ -26,7 +27,7 @@
         <div class="cartItem">
             <div class="imageTextContainer">
                 <div class="image" id="image" style="display: inline-block;">
-                    <img class="cartItemImage" src={{asset("/images/logo.png")}} alt="logo">
+                    <img class="cartItemImage" src={{asset("/images/navbar/logo.png")}} alt="logo">
                 </div>
                 <div class="text" id="text">
                     <div>

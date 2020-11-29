@@ -1,3 +1,4 @@
+@include('inc.navbar')
 @extends('layouts.app')
 @section('content')
 <head>
@@ -6,8 +7,8 @@
 </head>
 
 <header>
-<div class="main-header" style="position: relative;"><img src={{asset("../public/images/shop_banner.jpg")}}>
-  <div id="shop_header_text" style="position: absolute;">
+<div class="main-header" style="position: relative;"><img src={{asset("/images/headerImages/shop_banner.jpg")}}>
+  <div id="header_text" style="position: absolute;">
     <p><b>SHOP</b></p>
    </div>
  </div>
@@ -57,7 +58,7 @@
                 </svg>
                 <!--  -->
                 <div class="image" id="image" style="display: inline-block;">
-                    <img class="itemImage" src={{asset("/images/product_eggs.png")}} alt="Product Image">
+                    <img class="itemImage" src={{asset("/images/shop/product_eggs.png")}} alt="Product Image">
                 </div>
 
                 <div class="text" id="text">
@@ -85,7 +86,7 @@
             </div>
             <div class="modal-window" id="eggs-modal">
                 <div>
-                  <img src={{asset("/images/product_eggs.png")}} style="max-width: 150px; float: left;" alt="Product Image">
+                  <img src={{asset("/images/shop/product_eggs.png")}} style="max-width: 150px; float: left;" alt="Product Image">
                   <h3 style="margin-top: 5px; padding-left: 15px; display: flex; flex:1;">Farm Eggs</h3>
                   <p class="modal-text">Thistle Farm</p>
                   <p class="modal-text">In Stock</p>
@@ -105,7 +106,7 @@
                 </svg>
                 <!--  -->
                 <div class="image" id="image" style="display: inline-block;">
-                    <img class="itemImage" src={{asset("/images/product_lettuce.png")}} alt="Product Image">
+                    <img class="itemImage" src={{asset("/images/shop/product_lettuce.png")}} alt="Product Image">
                 </div>
 
                 <div class="text" id="text">
@@ -133,7 +134,7 @@
             </div>
             <div class="modal-window" id="lettuce-modal">
               <div>
-                <img src={{asset("/images/product_lettuce.png")}} style="max-width: 150px; float: left;" alt="Product Image">
+                <img src={{asset("/images/shop/product_lettuce.png")}} style="max-width: 150px; float: left;" alt="Product Image">
                 <h3 style="margin-top: 5px; padding-left: 15px; display: flex; flex:1;">Lettuce</h3>
                 <p class="modal-text">Tranquille Farm</p>
                 <p class="modal-text">In Stock</p>
@@ -153,7 +154,7 @@
                 </svg>
                 <!--  -->
                 <div class="image" id="image" style="display: inline-block;">
-                    <img class="itemImage" src={{asset("/images/product_sausage.png")}} alt="Product Image">
+                    <img class="itemImage" src={{asset("/images/shop/product_sausage.png")}} alt="Product Image">
                 </div>
 
                 <div class="text" id="text">
@@ -181,7 +182,7 @@
             </div>
             <div class="modal-window" id="sausage-modal">
               <div>
-                <img src={{asset("/images/product_sausage.png")}} style="max-width: 150px; float: left;" alt="Product Image">
+                <img src={{asset("/images/shop/product_sausage.png")}} style="max-width: 150px; float: left;" alt="Product Image">
                 <h3 style="margin-top: 5px; padding-left: 15px; display: flex; flex:1;">Italian Sausage</h3>
                 <p class="modal-text">Sullindeo Farm</p>
                 <p class="modal-text">In Stock</p>
@@ -276,7 +277,7 @@
           $("#sausage-modal").hide();
         });
         */
-        
+
         $("#add").click(function(){
           var num = parseInt($('#quantity').val(), 10);
           $('#quantity').val(num+1);

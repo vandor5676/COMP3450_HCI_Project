@@ -14,6 +14,7 @@
   display: none;
 }
 
+
 .banner {
     display: flex;
     justify-content: center;
@@ -27,53 +28,68 @@
     min-height: 100%
 }
 
-img {
-    max-width: 100%;
-    display: block;
-    border-style: none;
-}
 
 #header_text{
-  font-family: 'BenchNine', sans-serif;
-    display: flex;
+      display: flex;
     font-size: 125px;
     margin-top: 3%;
     color: #FFFFFF;
       justify-content: center;
       align-items: center;
-      height: 7cm;
-      font-size: 6em;
       font-family: 'Barlow Condensed', sans-serif;
       color: white;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
 
   .banner {
     display: none;
   }
 
   .mobile_banner {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1em;
+    width: 100%;
   }
 
-
+  .mobile_banner img {
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%
+}
+#header_text{
+  font-size: 80px;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-  .banner {
-    display: none;
-  }
-
-  .mobile_banner {
-    display: block;
-  }
-
-
  }
+
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (max-width: 420px) {
+
+   .banner {
+     display: none;
+   }
+
+   .mobile_banner {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     margin-bottom: 1em;
+     width: 100%;
+   }
+
+   .mobile_banner img {
+       flex-shrink: 0;
+       min-width: 100%;
+       min-height: 100%
+ }
+ #header_text{
+   font-size: 60px !important;
+ }
+
+  }

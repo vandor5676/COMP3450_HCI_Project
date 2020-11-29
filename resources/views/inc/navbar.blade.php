@@ -2,13 +2,13 @@
 <body>
   <div class="mobile_bar">
     <div class="mobile_logo">
-      <a href="#"><img class="navbarLogo" src={{asset("/images/mobile_logo.png")}} alt="logo"></a>
+      <a href="#"><img class="navbarLogo" src={{asset("/images/navbar/mobile_logo.png")}} alt="logo"></a>
     </div>
     <div class="fa fa-bars fa-2x hamburger_menu" style="color:white;">
 
     </div>
     <div class="mobile_menu_items">
-      <a href="/COMP3450_HCL_Project/public"><div class="menu_items">HOME</div></a>
+      <a href="/COMP3450_HCL_Project/public/home"><div class="menu_items">HOME</div></a>
       <hr class="solid">
       <a href="/COMP3450_HCL_Project/public/shop"><div class="menu_items">SHOP</div></a>
       <hr class="solid">
@@ -18,7 +18,7 @@
       <hr class="solid">
       <a href="/COMP3450_HCL_Project/public/cart"><div class="menu_items">CART</div></a>
       <hr class="solid">
-      <a href="/COMP3450_HCL_Project/public"><div class="menu_items">LOGOUT</div></a>
+      <a href="/COMP3450_HCL_Project/public/"><div class="menu_items">LOGOUT</div></a>
       <hr class="solid">
       <div class="close">&times;</div>
     </div>
@@ -26,7 +26,7 @@
 
   <div class="bar">
     <div class="navbarItem">
-      <a class="navbarLink" href="/COMP3450_HCL_Project/public/shop">HOME</a>
+      <a class="navbarLink" href="/COMP3450_HCL_Project/public/home">HOME</a>
     </div>
 
     <div class="navbarItem">
@@ -39,7 +39,7 @@
 
     <div class="navbar__logo-container">
       <div class="logo">
-      <a href="#"><img class="navbarLogo" src={{asset("/images/logo.png")}} alt="logo"></a>
+      <a href="#"><img class="navbarLogo" src={{asset("/images/navbar/logo.png")}} alt="logo"></a>
       </div>
     </div>
 
@@ -48,7 +48,7 @@
     </div>
 
     <div class="navbarItem">
-      <a class="navbarLink" href="/COMP3450_HCL_Project/public/vendoraccount">LOGOUT</a>
+      <a class="navbarLink" href="/COMP3450_HCL_Project/public/">LOGOUT</a>
     </div>
 
     <div class="navbarItem">

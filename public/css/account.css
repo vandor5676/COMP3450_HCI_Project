@@ -5,6 +5,17 @@
   font-family: 'BarlowCondensed', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+    border-style: none;
+}
+
+.order_img_text{
+    font-size: 25px;
+}
+
+
 .profile {
   margin-left: 10%;
   margin-right: 10%;
@@ -27,6 +38,12 @@
     border-width: 2px;
     border-color: #ece5e5;
     border-radius: 10px;
+    padding:2%;
+}
+
+.avatar-user {
+    max-width: 100%;
+    height: auto;
     padding:2%;
 }
 
@@ -183,9 +200,17 @@ input[type=number], select {
     margin-bottom: 5%;
 }
 
-#current_banner{
+#product_banner{
   margin-bottom: 1%;
   width: 100%;
+}
+
+#product_700_banner{
+  display: none;
+}
+
+#product_900_banner{
+  display: none;
 }
 
 .current_products {
@@ -194,13 +219,15 @@ input[type=number], select {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-items:
 }
 
 .product_img {
   border: solid;
   border-width: 2px;
   border-color: #ece5e5;
+  max-width: 100%;
+  display: block;
+  border-style: none;
 }
 
 .preview_img_container {
@@ -268,6 +295,12 @@ input[type=number], select {
   border-style: none;
 }
 
+#product_plus_btn{
+  max-width: 100%;
+  display: block;
+  border-style: none;
+}
+
 #add_product_form {
   color: #464646;
   padding: 5%;
@@ -292,7 +325,7 @@ input[type=number], select {
   color: white;
 }
 
-#save_new_product:hover{
+#save_new_product:hover{20
   background-color:  #464646;
 }
 
@@ -301,7 +334,7 @@ input[type=number], select {
   background-color:  #f7b538;
   border: none;
   margin:10px;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 #view_store:hover{
@@ -315,9 +348,22 @@ input[type=number], select {
 }
 
 #orders_banner{
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   width: 100%;
 }
+
+#orders_700_banner{
+  display: none;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+#orders_900_banner{
+  display: none;
+  margin-bottom: 2%;
+  width: 100%;
+}
+
 
 .accordion-wrap{
     margin-bottom: 1%;
@@ -343,6 +389,20 @@ input[type=number], select {
 
 .plus{
   float: right;
+}
+
+.order-img-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.order_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
 }
 
 .panel {
@@ -385,7 +445,7 @@ input[type=number], select {
 .status_badge {
   position: relative;
   background-color: #9e2a2b;
-  right: 100px;
+  right: 20px;
   float: right;
   border-radius: 5px;
   padding: 0px 20px;
@@ -394,22 +454,98 @@ input[type=number], select {
 .status_badge_shipped {
   position: relative;
   background-color:  #426a5a;
-  right: 100px;
+  right: 20px;
   float: right;
   border-radius: 5px;
   padding: 0px 20px;
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 900px) {
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+  #product_banner{
+    display: none;
+  }
 
+  #product_700_banner{
+    display: none;
+  }
+
+  #product_900_banner{
+    display: flex;
+  }
+
+  #orders_banner{
+    display: none;
+  }
+
+  #orders_700_banner{
+    display: none;
+  }
+
+  #orders_900_banner{
+    display: flex;
+  }
+
+.preview_img_text{
+    font-size: 15px;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
+
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 
-}
+  #product_banner{
+    display: none;
+  }
+
+  #product_700_banner{
+    display: flex;
+
+  }
+
+  #product_900_banner{
+    display: none;
+  }
+
+  #orders_banner{
+    display: none;
+  }
+
+  #orders_700_banner{
+    display: flex;
+  }
+
+  #orders_900_banner{
+    display: none;
+  }
+
+  .status_badge {
+    position: relative;
+    background-color: #9e2a2b;
+    right: 20px;
+    float: right;
+    border-radius: 5px;
+    padding: 0px 15px;
+  }
+
+  .status_badge_shipped {
+    position: relative;
+    background-color:  #426a5a;
+    right: 20px;
+    float: right;
+    border-radius: 5px;
+    padding: 0px 15px;
+  }
+
+  .preview_img_text{
+      font-size: 10px;
+  }
+  .order_img_text{
+      font-size: 20px;
+  }
+
+
+ }

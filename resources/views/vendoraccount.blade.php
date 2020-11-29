@@ -1,3 +1,4 @@
+@include('inc.navbar')
 @extends('layouts.app')
 @section('content')
 
@@ -6,7 +7,7 @@
 </head>
 
 <header>
-<div class="main-header" style="position: relative;"><img src={{asset("../public/images/vendor_header.jpg")}}>
+<div class="main-header" style="position: relative;"><img src={{asset("/images/headerImages/vendor_header.jpg")}}>
   <div id="header_text" style="position: absolute;">
     <p><b>WELCOME BACK</b></p>
    </div>
@@ -17,7 +18,7 @@
   <div class="flex-grid">
     <div class="row profile_info">
     <div class="col profile_img">
-      <img alt="Avatar" class="avatar" src="../public/images/bee_dark.png">
+      <img alt="Avatar" class="avatar" src={{asset("/images/vendorLogos/bee_dark.png")}}>
       <div class="profile-btn-container">
         <input type="file" id="upload" hidden/>
         <label id="upload_label" for="upload" class="btn btn-primary">UPLOAD IMAGE</label>
@@ -38,11 +39,11 @@
       <div id="profile_info_view">
         <div id="vendor_shop_name">Natural Bee Farm</div>
         <div id="vendor_date"><p><i class="fas fa-user-circle" style="color:#426a5a;"></i> &nbsp;Vendor since 10/19/2020</p></div>
-        <div><img src="../public/images/location_banner.png"></div>
+        <div><img src={{asset("/images/banners/location_banner.png")}}></div>
         <div id="vendor_shop_address">
           <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;<span id="address_val">1234 Okanagan Way, Kamloops BC V2B1F8</span></p>
         </div>
-        <div><img src="../public/images/contact_banner.png"></div>
+        <div><img src={{asset("/images/banners/contact_banner.png")}}></div>
         <div id="vendor_shop_email">
           <p><i class="fas fa-phone"></i> &nbsp;&nbsp;<span id="phone_val">250-852-1567</p></span>
         </div>
@@ -80,26 +81,34 @@
       </div>
   </div>
 <section class="products">
-      <div><img id="current_banner" src="../public/images/current_banner.jpg"></div>
+      <div>
+        <img id="product_banner" src={{asset("/images/banners/products_banner.png")}}>
+        <img id="product_900_banner" src={{asset("/images/banners/products_900_banner.png")}}>
+        <img id="product_700_banner" src={{asset("/images/banners/products_700_banner.png")}}>
+      </div>
       <div  class="flex-grid current_products">
-          <div class="preview_img_container"><img class="product_img" src="../public/images/honey_jar.png" alt=""><span class="preview_img_text">Premium Honey</span></div>
-          <div class="preview_img_container"><img class="product_img" src="../public/images/honey-treats.png" alt=""><span class="preview_img_text">Flavored Honey Sticks</span></div>
-          <div class="preview_img_container"><img class="product_img" src="../public/images/candle.jpg" alt=""><span class="preview_img_text">Beeswax Candles</span></div>
-          <div class="preview_img_container"><img class="product_img" src="../public/images/honey_comb.jpg" alt=""><span class="preview_img_text">Honey Comb</span></div>
-          <div class="preview_img_container"><img class="product_img" src="../public/images/honey_stick.jpg" alt=""><span class="preview_img_text">Dippers</span></div>
-          <div class="preview_img_container"><img class="product_img" src="../public/images/lip_product.jpg" alt=""><span class="preview_img_text">Beeswax Lip Balm</span></div>
-          <div class="preview_img_container"><img class="product_img" src="../public/images/foodwrap.jpg" alt=""><span class="preview_img_text">Beeswax Cloth</span></div>
-          <div id="insert" class="preview_img_container"><button id="add_product"><img src="../public/images/add_button.png" alt=""><span class="preview_img_text">ADD NEW</span></button></div>
+          <div class="preview_img_container"><img class="product_img" src={{asset("/images/vendorProducts/honey_jar.png")}} alt=""><span class="preview_img_text">Premium Honey</span></div>
+          <div class="preview_img_container"><img class="product_img" src={{asset("/images/vendorProducts/honey-treats.png")}} alt=""><span class="preview_img_text">Flavored Honey Sticks</span></div>
+          <div class="preview_img_container"><img class="product_img" src={{asset("/images/vendorProducts/candle.jpg")}} alt=""><span class="preview_img_text">Beeswax Candles</span></div>
+          <div class="preview_img_container"><img class="product_img" src={{asset("/images/vendorProducts/honey_comb.jpg")}} alt=""><span class="preview_img_text">Honey Comb</span></div>
+          <div class="preview_img_container"><img class="product_img" src={{asset("/images/vendorProducts/honey_stick.jpg")}} alt=""><span class="preview_img_text">Dippers</span></div>
+          <div class="preview_img_container"><img class="product_img" src={{asset("/images/vendorProducts/lip_product.jpg")}} alt=""><span class="preview_img_text">Beeswax Lip Balm</span></div>
+          <div class="preview_img_container"><img class="product_img" src={{asset("/images/vendorProducts/foodwrap.jpg")}} alt=""><span class="preview_img_text">Beeswax Cloth</span></div>
+          <div id="insert" class="preview_img_container"><button id="add_product"><img id="product_plus_btn" src="../public/images/add_button.png" alt=""><span class="preview_img_text">ADD NEW</span></button></div>
       </div>
 
       <span class="center">
 
-        <button id="view_store" class="btn btn-primary">VIEW SHOP</button>
+        <a id="view_store" href="/NaturalBeeFarm" class="btn btn-primary">VIEW SHOP</a>
       </span>
 </section>
 
 <section class="orders">
-      <div><img id="orders_banner" src="../public/images/orders_banner.jpg"></div>
+      <div>
+        <img id="orders_banner" src={{asset("/images/banners/orders_banner.png")}}>
+        <img id="orders_900_banner" src={{asset("/images/banners/orders_900_banner.png")}}>
+        <img id="orders_700_banner" src={{asset("/images/banners/orders_700_banner.png")}}>
+      </div>
 <div class="orders-wrap">
   <div class="accordion-wrap">
       <button class="accordion">Order #: 124<i class="fas fa fa-plus plus"></i><span class="status_badge order_status_text">PROCESSING</span></button>
@@ -176,6 +185,9 @@
     </div>
   </div>
 </section>
+
+<a href="/useraccount" style="float:right; font-size:20px; margin:2%;">GO TO CUSTOMER ACCOUNT DEMO &nbsp;&nbsp;<i class="fas fa-arrow-right"></i></a>
+
 
 <script>
   var $updateProfileButton = $('#update_profile');
