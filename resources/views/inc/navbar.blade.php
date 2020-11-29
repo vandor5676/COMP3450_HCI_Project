@@ -20,7 +20,7 @@
       <hr class="solid">
       <a href="/COMP3450_HCL_Project/public/"><div class="menu_items">LOGOUT</div></a>
       <hr class="solid">
-      <div class="close">&times;</div>
+      <div class="close" style="font-size: 100px; margin-right: 58px;">&times;</div>
     </div>
   </div>
 
