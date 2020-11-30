@@ -19,7 +19,7 @@ more delivered right to their door.
 
 <h3 align="center"><b>Desktop View</b></h3>
 <p align="center"><img src="https://i.ibb.co/Fgc4S7B/desktop.png" alt="desktop" width='400px'></p>
-<h3><b>Tablet View</b></h3>
+<h3 align="center"><b>Tablet View</b></h3>
 <p align="center"><img src="https://i.ibb.co/S54bfZ2/iPad.png" alt="iPad" width='400px'></p>
-<h3><b>Mobile View</b></h3>
+<h3 align="center"><b>Mobile View</b></h3>
 <p align="center"><img src="https://i.ibb.co/58SjrYs/mobile.png" alt="mobile" width='400px'></p>
