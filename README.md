@@ -1,4 +1,4 @@
-<p align="center"><img src="https://ibb.co/DWV0021" width="400"></p>
+<p align="center"><img src="https://i.ibb.co/QQbyywJ/logo.png" alt="logo" border="0"></p>
 
 <h1 align="center"><b>Kamloops Virtual Marketplace<b></h1>
 <h3 align="center">Official Github</h3>
@@ -13,12 +13,12 @@
 <p>This website is the final project submission for COMP 3450: Human Computer Interation.</p>
 
 <h3><b>Desktop View</b></h3>
-<img src="https://ibb.co/18BGD29" width="400">
+<img src="https://i.ibb.co/Fgc4S7B/desktop.png" alt="desktop" border="0" />
 
 <h3><b>Tablet View</b></h3>
-<img src="https://ibb.co/Ntd5TGX" width="400">
+<img src="https://i.ibb.co/S54bfZ2/iPad.png" alt="iPad" border="0">
 
 <h3><b>Mobile View</b></h3>
-<img src="https://ibb.co/gTfWSvt" width="400">
+<img src="https://i.ibb.co/58SjrYs/mobile.png" alt="mobile" border="0">
 
 </div>
